@@ -48,12 +48,64 @@
                 }
             }
         }
+
+        .choco {
+            padding-bottom: 20px;
+        }
     }
 }
 
 
 
 $orange: #FD9222;
+
+
+.taste {
+    width: 100%;
+    max-width: 1136px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 128px 0;
+
+    &--title {
+        font-family: Montserrat;
+        font-weight: 600;
+        font-style: SemiBold;
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: -3%;
+        text-align: center;
+        text-transform: uppercase;
+        width: 411px;
+        padding-bottom: 28px;
+
+        & span {
+            color: #FD9222;
+        }
+    }
+
+    &--text {
+        font-family: Montserrat;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: -2%;
+        text-align: center;
+        color: #111111;
+        width: 486px;
+        padding-bottom: 50px;
+    }
+}
+
+.chocolate {
+    width: 100%;
+    max-width: 1136px;
+    display: flex;
+    justify-content: space-between;
+    gap: 19px;
+}
 
 .chocolate-card {
     max-width: 270px;
@@ -62,17 +114,20 @@ $orange: #FD9222;
     border-radius: 25px;
     overflow: hidden; // Важно: обрезает всё, что выходит за границы
     cursor: pointer;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 2px solid #FD9222;
+
 
     .card-front {
         width: 100%;
         height: 100%;
-        background-color: $orange;
+        background-color: #FD9222;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         padding: 28px;
         box-sizing: border-box;
+
+
 
         .chocolate-img {
             margin-bottom: 36px;
@@ -87,8 +142,11 @@ $orange: #FD9222;
             letter-spacing: -2%;
             text-transform: uppercase;
             color: #FFFFFF;
+            max-height: 144px;
         }
     }
+
+
 
     .card-back {
         position: absolute;
@@ -163,11 +221,617 @@ $orange: #FD9222;
             line-height: 18px;
             letter-spacing: -2%;
             color: #111111;
+            height: 146px;
+            overflow-y: auto;
         }
     }
 
     // Эффект при наведении
     &:hover .card-back {
         transform: translateY(0); // Возвращаем в исходную позицию
+    }
+
+    &:hover {
+
+        border: 2px solid #FD9222;
+    }
+}
+
+.milk {
+
+    border: 2px solid #FD9222;
+
+    .card-front {
+
+        background-color: #FFFFFF;
+
+        .title {
+            color: #111111;
+        }
+    }
+
+    .card-back {
+        padding: 23px;
+    }
+}
+
+.nuts {
+
+    border: 2px solid #1E1823;
+
+    .card-front {
+
+        background-color: #1E1823;
+
+    }
+
+    .card-back {
+        padding: 23px;
+    }
+}
+
+.semi {
+    border: 2px solid #FD9222;
+
+    .card-front {
+
+        background-color: #FFFFFF;
+
+        .title {
+            color: #111111;
+        }
+    }
+
+    .card-back {
+        padding: 23px;
+
+        & .tags {
+            max-width: 216px;
+
+            & .tag {
+                padding: 6px 16px;
+            }
+
+            & .tag-filled {
+                max-width: 114px;
+                padding: 6px 16px;
+            }
+
+            & .tag-outline {
+                max-width: 95px;
+            }
+        }
+    }
+}
+
+
+
+.made {
+    width: 100%;
+    max-width: 1136px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &--title {
+        font-family: Montserrat;
+        font-weight: 600;
+        font-style: SemiBold;
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: -3%;
+        text-align: center;
+        text-transform: uppercase;
+        color: #111111;
+        padding-bottom: 50px;
+
+        & span {
+            color: #FD9222;
+        }
+    }
+
+    &_container {
+        width: 100%;
+        max-width: 1136px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &--left {
+            max-width: 600px;
+            position: relative;
+
+            &--video2 {
+                display: none;
+            }
+
+            &:hover .made_container--left--play path {
+                fill: #FD9222;
+                transition: 0.3s ease;
+            }
+
+
+            &:hover .made_container--left--play circle {
+                stroke: #FD9222;
+                transition: 0.3s ease;
+            }
+
+            &--play {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        &--right {
+            width: 100%;
+            max-width: 516px;
+            display: flex;
+            flex-direction: column;
+            background-color: #FFFFFF;
+            border-radius: 15px;
+            padding: 33px;
+
+            &--title {
+                font-family: Montserrat;
+                font-weight: 600;
+                font-style: SemiBold;
+                font-size: 18px;
+                line-height: 24px;
+                letter-spacing: 0%;
+                color: #111111;
+                padding-bottom: 28px;
+                width: 350px;
+            }
+
+            &--box {
+                width: 100%;
+                max-width: 452px;
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+
+                &--card {
+                    width: 100%;
+                    max-width: 452px;
+                    gap: 8px;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+
+                    &--dot {
+                        padding-top: 4px;
+                    }
+
+                    &--text {
+                        font-family: Montserrat;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 18px;
+                        letter-spacing: -2%;
+                        color: #111111;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.line {
+    margin: 0 auto;
+    width: 1136px;
+    height: 51px;
+    background-color: #D9D9D9;
+    margin-top: 36px;
+    margin-bottom: 41px;
+}
+
+
+
+#mobile_menu {
+    display: none;
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.active {
+    display: flex;
+}
+
+
+
+
+
+:root {
+    --orange: #FD9222;
+    --gray: #e0e0e0;
+    --gap: 20px;
+}
+
+.products {
+    width: 100%;
+    max-width: 1136px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 128px;
+
+    &--title {
+        font-family: Montserrat;
+        font-weight: 600;
+        font-style: SemiBold;
+        font-size: 24px;
+        leading-trim: NONE;
+        line-height: 28px;
+        letter-spacing: -3%;
+        text-align: center;
+        text-transform: uppercase;
+        color: #111111;
+        padding-bottom: 50px;
+
+        & span {
+            color: #FD9222;
+        }
+    }
+}
+
+.slider-container {
+    width: 100%;
+    max-width: 1136px;
+    overflow: hidden;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 20px;
+    padding-left: 0;
+    /* Будет меняться в медиа-запросах */
+    align-items: stretch;
+}
+
+.card {
+    border: 1px solid #1111111A;
+
+    /* ВАЖНО: запрещаем карточке сжиматься или растягиваться */
+    flex-shrink: 0;
+
+    background: white;
+    border: 1px solid #f0f0f0;
+    border-radius: 15px;
+    padding: 25px 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 270px;
+
+    &--title {
+        font-family: Montserrat;
+        font-weight: 600;
+        font-style: SemiBold;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: -2%;
+        text-transform: uppercase;
+        color: #111111;
+        padding-top: 8px;
+    }
+
+    &--subtitle {
+        font-family: Montserrat;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: -2%;
+        color: #111111B2;
+        padding-top: 2px;
+        padding-bottom: 18px;
+    }
+
+    &--price {
+        font-family: Montserrat;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: #111111;
+        border: 1px solid #1111111A;
+        background-color: #FAFAFA;
+        border-radius: 100px;
+        padding: 8px 20px;
+        font-weight: bold;
+        font-size: 13px;
+        display: inline-block;
+        width: 94px;
+    }
+}
+
+
+.dots-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 32px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: var(--gray);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background-color: var(--orange);
+    width: 30px;
+    border-radius: 10px;
+}
+
+
+.sellers {
+    width: 100%;
+    max-width: 1136px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 128px;
+
+    &--title {
+        font-family: Montserrat;
+        font-weight: 600;
+        font-style: SemiBold;
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: -3%;
+        text-align: center;
+        text-transform: uppercase;
+        color: #111111;
+        padding-bottom: 50px;
+
+        & span {
+            color: #FD9222;
+        }
+    }
+
+    &_container {
+        width: 100%;
+        max-width: 1136px;
+        display: flex;
+        gap: 16px;
+        padding-bottom: 32px;
+    }
+
+    &_bottom {
+        width: 100%;
+        max-width: 1136px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        &--title {
+            font-family: Montserrat;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 14px;
+            line-height: 18px;
+            letter-spacing: -2%;
+            color: #111111;
+            width: 415px;
+        }
+
+        .buy-now-btn {
+            font-family: Montserrat;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: #FFFFFF;
+            background-color: #FD9222;
+            width: 100%;
+            max-width: 162px;
+            border-radius: 100px;
+            padding: 14px 40px;
+            border: none;
+        }
+    }
+}
+
+
+
+
+.modal-overlay {
+    display: none;
+    /* Скрыто по умолчанию */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Полупрозрачный черный */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Контентное окно */
+.modal-content {
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    position: relative;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Кнопка закрытия (крестик) */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Показываем модалку при добавлении класса через JS */
+.modal-overlay.active {
+    display: flex;
+}
+
+
+
+
+
+
+
+
+body {
+    background-color: #f8f9fa;
+}
+
+.testimonial-section {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.swiper {
+    padding-bottom: 50px !important;
+}
+
+.testimonial-card {
+    background: #fff;
+    border-radius: 20px;
+    border: 1px solid #eee;
+    padding: 40px 20px 30px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    margin: 40px 10px;
+    position: relative;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid #fff;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonial-card h3 {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.testimonial-card p {
+    color: #666;
+    line-height: 1.5;
+    font-size: 0.95rem;
+    margin-top: 15px;
+}
+
+/* Стилизация оранжевых точек (pagination) */
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: #ddd !important;
+    opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: #ff9800 !important;
+    /* Оранжевый цвет как на фото */
+    width: 30px;
+    /* Делаем активную точку длиннее */
+    border-radius: 10px;
+}
+
+
+
+
+
+
+.explore {
+    background-image: url("./img/Subcribe.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &_container {
+        width: 100%;
+        max-width: 467px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        margin: 0 auto;
+        padding: 72px 0;
+        align-items: center;
+
+        &--title {
+            font-family: Montserrat;
+            font-weight: 600;
+            font-style: SemiBold;
+            font-size: 24px;
+            line-height: 28px;
+            letter-spacing: -3%;
+            text-align: center;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            width: 378px;
+        }
+
+        &--text {
+            font-family: Montserrat;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 14px;
+            line-height: 18px;
+            letter-spacing: -2%;
+            text-align: center;
+            color: #FFFFFF;
+        }
+
+        &--button {
+            width: 100%;
+            max-width: 172px;
+            background-color: #FD9222;
+            font-family: Montserrat;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: #FFFFFF;
+            padding: 14px 40px;
+            border: none;
+            border-radius: 100px;
+            cursor: pointer;
+        }
     }
 }

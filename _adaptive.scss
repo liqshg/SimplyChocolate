@@ -1,6 +1,130 @@
+@media (max-width:1160px) {
+    main {
+        .chocolate {
+            max-width: 704px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+
+            & .chocolate-card {
+                grid-column: 1;
+                grid-row: 1;
+                max-width: 336px;
+            }
+
+            & .milk {
+                grid-column: 1;
+                grid-row: 2;
+            }
+
+            & .nuts {
+                grid-column: 2;
+                grid-row: 2;
+            }
+
+            & .semi {
+                grid-column: 2;
+                grid-row: 1;
+            }
+
+            .chocolate-img {
+                margin: 0 28px 25px 28px;
+            }
+        }
+
+        .made_container {
+            display: grid;
+            grid-template-columns: 1fr;
+            margin: 0 auto;
+            max-width: 614px;
+            gap: 20px;
+            padding-bottom: 100px;
+
+            &--left--video {
+                width: 614px;
+                height: 400px;
+            }
+
+            &--right {
+                max-width: 614px;
+
+                &--box {
+                    max-width: 500px;
+
+                    &--card {
+
+                        max-width: 500px;
+                    }
+                }
+            }
+        }
+
+        .line {
+            display: none;
+        }
+
+        // .products {
+        //     padding-left: 33px;
+        //     margin-bottom: 100px;
+
+
+        // }
+
+        // .slider-container{
+        //     max-width: 874px;
+        // }
+
+        //     .products {
+        //     padding-left: 33px;
+        //     margin-bottom: 100px;
+
+        //     &_slider {
+        //         max-width: 847px;
+        //     }
+        // }
+
+        .slider-track {
+            padding-left: 30px;
+            /* Отступ слева для первой карточки */
+        }
+
+        .card {
+            /* Фиксируем ширину так, чтобы влезло 2 целых и кусок третьей */
+            width: 280px;
+        }
+
+        .sellers {
+            max-width: 704px;
+
+            &_container {
+                max-width: 704px;
+
+                &_card3 {
+                    display: none;
+                }
+
+                &_card1 {
+                    width: 344px;
+                }
+
+                &_card2 {
+                    width: 344px;
+                }
+            }
+
+            &_bottom--title {
+                width: 306px;
+            }
+        }
+
+    }
+}
+
+
+
 @media (max-width:1050px) {
-    main{
-        .about_container{
+    main {
+        .about_container {
             display: grid;
             grid-template-columns: 1fr 1fr;
             margin: 0 auto;
@@ -8,7 +132,7 @@
             gap: 32px;
         }
 
-        .about_container_card--line{
+        .about_container_card--line {
             display: none;
         }
     }
@@ -20,11 +144,12 @@
         .header_top_info {
             display: none;
         }
+
         .header_top--social {
             display: none;
         }
 
-        .header_top--burger{
+        .header_top--burger {
             display: block;
         }
     }
@@ -32,52 +157,251 @@
 
 @media (max-width:768px) {
     body {
-        .header_home{
-            padding-top: 715px;
+        .header_home {
+            padding-top: 685px;
             background-image: url("./img/bg-home-tablet.png");
         }
 
-        .header_home--line{
+        .header_home--line {
             display: none;
         }
     }
 
-    main{
-        .about_container{
+    // main{
+    //      .products {
+    //     padding-left: 20px;
+    //     padding-right: 20px;
+    //     margin-bottom: 72px;
+
+    //     &_slider {
+    //         max-width: 335px;
+    //         margin-top: 32px;
+
+    //         &--track {
+
+    //             &--card {
+    //                 flex: 0 0 335px;
+    //                 width: 335px;
+    //             }
+    //         }
+    //     }
+    // }
+    // }
+
+}
+
+@media (max-width:740px) {
+    main {
+        .about_container {
             display: grid;
             grid-template-columns: 1fr;
             margin: 0 auto;
             max-width: 335px;
         }
+
+
+        .chocolate {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+            max-width: 336px;
+
+
+            & .chocolate-card {
+                grid-column: 1;
+                grid-row: 1;
+                max-width: 336px;
+            }
+
+            & .milk {
+                grid-column: 1;
+                grid-row: 2;
+            }
+
+            & .nuts {
+                grid-column: 1;
+                grid-row: 3;
+            }
+
+            & .semi {
+                grid-column: 1;
+                grid-row: 4;
+            }
+        }
+
+        .sellers {
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            max-width: 335px;
+            gap: 20px;
+            align-items: flex-start;
+
+            &--title {
+                font-size: 20px;
+                line-height: 24px;
+                margin: 0 auto;
+                padding-bottom: 32px;
+            }
+        }
+
+        .sellers_container,
+        .sellers_bottom {
+            display: contents;
+        }
+
+        .sellers_container_card1 {
+            order: 1;
+            width: 335px;
+            height: 464px;
+        }
+
+        .sellers_bottom--title {
+            order: 2;
+            margin-bottom: 12px;
+            width: 306px;
+            text-align: left;
+        }
+
+        .sellers_container_card2 {
+            order: 3;
+            width: 335px;
+            height: 464px;
+        }
+
+        .buy-now-btn {
+            order: 4;
+            margin: 0 auto;
+        }
     }
 }
 
-@media (max-width:650px){
-    body{
-        .header_home{
+@media (max-width:650px) {
+    body {
+        .header_home {
             padding-top: 395px;
         }
-        
-        .header_home_container{
-            padding:  0 20px  80px 20px;
+
+        .header_home_container {
+            padding: 0 20px 80px 20px;
         }
 
-        .header_home_absolute{
+        .header_home_absolute {
             left: 20px;
             bottom: 20px;
+        }
+    }
+
+    main {
+        .made_container {
+            max-width: 335px;
+            gap: 20px;
+            padding-bottom: 72px;
+
+            &--left--video {
+                display: none;
+            }
+
+            &--left--video2 {
+                display: block;
+            }
+
+            &--right {
+                max-width: 335px;
+                padding: 20px 14px;
+
+                &--title {
+                    width: 307px;
+                }
+
+                &--box {
+                    max-width: 307px;
+
+                    &--card {
+
+                        max-width: 307px;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:530px) {
+    body {
+        .header_home_container {
+            &--title {
+                font-family: Montserrat;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 24px;
+                letter-spacing: -3%;
+
+                & br {
+                    display: none;
+                }
+            }
+
+            &--box {
+                max-width: 295px;
+
+                &--but1 {
+                    font-family: Montserrat;
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 100%;
+                    letter-spacing: 0%;
+                    max-width: 120px;
+                    padding: 12px 28px;
+                }
+
+                &--but2 {
+                    font-family: Montserrat;
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 100%;
+                    letter-spacing: 0%;
+                    max-width: 159px;
+                    padding: 12px 27px;
+                }
+            }
+        }
+
+        .header_home_absolute--text {
+            font-family: Montserrat;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: -3%;
+        }
+    }
+
+    main {
+        .taste--title {
+            width: 283px;
+            font-family: Montserrat;
+            font-weight: 600;
+            font-style: SemiBold;
+            font-size: 20px;
+            line-height: 24px;
+            letter-spacing: -3%;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .taste--text {
+            width: 335px;
         }
     }
 }
 
 @media (max-width:375px) {
     body {
-        .header_home{
-            padding-top: 715px;
-            background-image: url("./img/bg-home-tablet.png");
+        .header_home {
+            background-image: url("./img/chocolate-covered-cocoa-powder\ 1.png");
         }
 
-        .header_home--line{
-            display: none;
-        }
+
     }
 }

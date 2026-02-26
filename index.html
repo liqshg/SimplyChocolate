@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -43,7 +44,7 @@
                         stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
             </div>
-            <div class="header_top--burger">
+            <div class="header_top--burger" id="openmenu">
                 <button class="header_top--burger"><img src="./img/menu-03.svg" alt="brgr"></button>
             </div>
         </div>
@@ -60,14 +61,22 @@
             </div>
             <div class="header_home_absolute">
                 <p class="header_home_absolute--text">scroll down</p>
-                <button class="header_home_absolute--button"><img src="./img/buttonscroll.svg" alt=""></button>
+                <button class="header_home_absolute--button"><svg xmlns="http://www.w3.org/2000/svg" width="38"
+                        height="38" viewBox="0 0 38 38" fill="none">
+                        <ellipse cx="19" cy="19" rx="19" ry="19" transform="matrix(0 1 1 0 0 0)" fill="white" />
+                        <path
+                            d="M19.6508 20.2834C19.5655 20.3693 19.4642 20.4375 19.3525 20.484C19.2407 20.5306 19.1209 20.5545 18.9999 20.5545C18.8789 20.5545 18.7591 20.5306 18.6474 20.484C18.5357 20.4375 18.4343 20.3693 18.3491 20.2834L14.1507 16.0759C14.0655 15.99 13.9641 15.9218 13.8524 15.8752C13.7407 15.8287 13.6209 15.8047 13.4999 15.8047C13.3789 15.8047 13.2591 15.8287 13.1474 15.8752C13.0357 15.9218 12.9343 15.99 12.8491 16.0759C12.6783 16.2476 12.5825 16.48 12.5825 16.7221C12.5825 16.9643 12.6783 17.1966 12.8491 17.3684L17.0566 21.5759C17.5722 22.0909 18.2712 22.3801 18.9999 22.3801C19.7287 22.3801 20.4276 22.0909 20.9433 21.5759L25.1508 17.3684C25.3201 17.1976 25.4156 16.9672 25.4166 16.7267C25.4173 16.6061 25.3942 16.4865 25.3486 16.3748C25.3029 16.2631 25.2357 16.1615 25.1508 16.0759C25.0655 15.99 24.9642 15.9218 24.8525 15.8752C24.7408 15.8287 24.6209 15.8047 24.4999 15.8047C24.3789 15.8047 24.2591 15.8287 24.1474 15.8752C24.0357 15.9218 23.9343 15.99 23.8491 16.0759L19.6508 20.2834Z"
+                            fill="#FD9222" />
+                    </svg>
+                </button>
             </div>
         </div>
     </header>
+    <div class="header_top--menu" id="mobilemenu"></div>
     <main>
         <section class="about">
             <div class="about_container">
-                <div class="about_container_card">
+                <div class="about_container_card choco">
                     <div class="about_container_card--box">
                         <img class="about_container_card--box--img" src="./img/icons1.png" alt="img">
                         <h3 class="about_container_card--box--title">Unsurpassed taste</h3>
@@ -101,30 +110,13 @@
             </div>
         </section>
         <section>
-            <h2>IT ALL ADDS UP TO ONE EXCEPTIONAL TASTE SENSATION</h2>
-            <p>At Simply Chocolate, we believe that the secret to exceptional chocolate is in the details. From the
-                sourcing of the finest ingredients to the careful crafting of each individual piece, every step of our
-                process adds up to one exceptional taste sensation.</p>
-            <div>
-                <div>
-                    <img src="./img/chocolate.png" alt="chocolate">
-                    <h3>MILK CHOCOLATE</h3>
-                </div>
-                <div>
-                    <img src="./img/milk.png" alt="milk">
-                    <h3>Milk</h3>
-                </div>
-                <div>
-                    <img src="./img/nuts.png" alt="nuts">
-                    <h3>nuts</h3>
-                </div>
-                <div>
-                    <img src="./img/semisweet.png" alt="semisweet">
-                    <h3>sEMI - SWEET CHOCOLATE</h3>
-                </div>
-            </div>
-
             <div class="taste">
+                <h2 class="taste--title">IT ALL ADDS UP TO ONE EXCEPTIONAL <span>TASTE</span> SENSATION</h2>
+                <p class="taste--text">At Simply Chocolate, we believe that the secret to exceptional chocolate is in
+                    the details. From the
+                    sourcing of the finest ingredients to the careful crafting of each individual piece, every step of
+                    our
+                    process adds up to one exceptional taste sensation.</p>
                 <div class="chocolate">
                     <div class="chocolate-card">
                         <div class="card-front">
@@ -140,17 +132,352 @@
                             </div>
                             <p class="description">
                                 Milk chocolate is a solid chocolate confectionery containing cocoa, sugar and milk. It
-                                is
-                                the
-                                most consumed type of chocolate. Chocolate was originally sold and consumed as a
-                                beverage in
-                                pre-Columbian times...
+                                is the most consumed type of chocolate. Chocolate was originally sold and consumed as a
+                                beverage in pre-Columbian times. Although four-fifths of all milk chocolate is sold in
+                                the United States and Europe, increasingly large amounts are consumed in China and Latin
+                                America.
+                        </div>
+                    </div>
+                    <div class="chocolate-card milk">
+                        <div class="card-front">
+                            <img src="./img/milk.png" alt="Milk Chocolate" class="chocolate-img">
+                            <h2 class="title">MILK</h2>
+                        </div>
+
+                        <div class="card-back">
+                            <h2 class="back-title">MILK</h2>
+                            <div class="tags">
+                                <span class="tag tag-filled">milk</span>
+                                <span class="tag tag-outline">the benefits</span>
+                            </div>
+                            <p class="description">
+                                Milk is a white liquid food produced by the mammary glands of mammals. It is the primary
+                                source of nutrition for young mammals (including breastfed human infants) before they
+                                are able to digest solid food.Early-lactation milk, which is called colostrum, contains
+                                antibodies that strengthen the immune system, and thus reduces the risk of many
+                                diseases. Milk contains many nutrients, including protein and lactose.
+                        </div>
+                    </div>
+                    <div class="chocolate-card nuts">
+                        <div class="card-front">
+                            <img src="./img/nuts.png" alt="Milk Chocolate" class="chocolate-img">
+                            <h2 class="title">nuts</h2>
+                        </div>
+
+                        <div class="card-back">
+                            <h2 class="back-title">Nuts</h2>
+                            <div class="tags">
+                                <span class="tag tag-filled">nuts</span>
+                                <span class="tag tag-outline">the benefits</span>
+                            </div>
+                            <p class="description">
+                                Almonds, pistachios, and walnuts are some types of nuts that contain healthy nutrients.
+                                When eaten as part of a nutrient-dense diet, these 9 nuts may offer benefits such as
+                                reducing your risk of heart disease. They’re a good source of fiber, healthy fats, and
+                                plant protein. Plus, they’re great on their own, paired with fruit, or added to dishes
+                                like salads, desserts, and grains.
+                        </div>
+                    </div>
+                    <div class="chocolate-card semi">
+                        <div class="card-front">
+                            <img src="./img/semisweet.png" alt="Milk Chocolate" class="chocolate-img">
+                            <h2 class="title">sEMI - SWEET CHOCOLATE</h2>
+                        </div>
+
+                        <div class="card-back">
+                            <h2 class="back-title">sEMI - SWEET CHOCOLATE</h2>
+                            <div class="tags">
+                                <span class="tag tag-filled">sweet chocolate</span>
+                                <span class="tag tag-outline">the benefits</span>
+                            </div>
+                            <p class="description">
+                                Semi-sweet chocolate has a cocoa solid content of 35 to 65%. One of the best ways to
+                                gain an understanding of this type of chocolate is to compare it to a different type of
+                                chocolate. Semisweet is darker than milk chocolate. In a taste comparison, it has a
+                                slightly bitter taste whereas milk chocolate is sweeter and more mellow. This delectable
+                                flavor of chocolate is very versatile.
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section class="made">
+            <h2 class="made--title">HOW IT’S <span>made?</span></h2>
+            <div class="made_container">
+                <div class="made_container--left">
+                    <img class="made_container--left--video" src="./img/image.png" alt="bg">
+                    <img class="made_container--left--video2" src="./img/bg-phone.png" alt="bg">
+                    <svg class="made_container--left--play" xmlns="http://www.w3.org/2000/svg" width="44" height="44"
+                        viewBox="0 0 44 44" fill="none">
+                        <path d="M15 33V12L35 22.5L15 33Z" fill="#F5F4F4" />
+                        <circle cx="22" cy="22" r="21.5" stroke="white" />
+                    </svg>
+                </div>
+                <div class="made_container--right">
+                    <h2 class="made_container--right--title">Try our chocolates today and discover the perfect balance
+                        of flavor</h2>
+                    <div class="made_container--right--box">
+                        <div class="made_container--right--box--card">
+                            <img class="made_container--right--box--card--dot" src="./img/Ellipse 1.svg" alt="dot">
+                            <p class="made_container--right--box--card--text">Heat the milk in a saucepan without
+                                bringing it to a boil. Add sugar and cocoa powder.</p>
+                        </div>
+                        <div class="made_container--right--box--card">
+                            <img class="made_container--right--box--card--dot" src="./img/Ellipse 1.svg" alt="dot">
+                            <p class="made_container--right--box--card--text">At the same time, prepare a water bath.
+                                Melt the butter on it.</p>
+                        </div>
+                        <div class="made_container--right--box--card">
+                            <img class="made_container--right--box--card--dot" src="./img/Ellipse 1.svg" alt="dot">
+                            <p class="made_container--right--box--card--text">"Mix" the milk mixture and already liquid
+                                butter. Mix thoroughly with a silicone spatula so that the mass becomes uniform and
+                                silky.</p>
+                        </div>
+                        <div class="made_container--right--box--card">
+                            <img class="made_container--right--box--card--dot" src="./img/Ellipse 1.svg" alt="dot">
+                            <p class="made_container--right--box--card--text">Heat the mixture over low heat, letting it
+                                barely boil.</p>
+                        </div>
+                        <div class="made_container--right--box--card">
+                            <img class="made_container--right--box--card--dot" src="./img/Ellipse 1.svg" alt="dot">
+                            <p class="made_container--right--box--card--text">Pour the chocolate into special containers
+                                (can be replaced with ice molds). Allow to cool and harden.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <section class="line"></section>
+
+
+        <section class="products">
+            <h2 class="products--title">Our <span>Products</span></h2>
+
+            <div class="slider-container">
+                <div class="slider-track" id="track">
+                    <div class="card">
+                        <img class="card--img" src="./img/chocolate (1).png" alt="chocolate">
+                        <h3 class="card--title">orange</h3>
+                        <p class="card--subtitle">Dark chocolate</p>
+                        <button class="card--price">45 UAH</button>
+                    </div>
+                    <div class="card">
+                        <img class="card--img" src="./img/apple.png" alt="chocolate">
+                        <h3 class="card--title">APPLE&CRANBERRY</h3>
+                        <p class="card--subtitle">Milk chocolate</p>
+                        <button class="card--price">50 UAH</button>
+                    </div>
+                    <div class="card">
+                        <img class="card--img" src="./img/lime.png" alt="chocolate">
+                        <h3 class="card--title">lime&sea salt</h3>
+                        <p class="card--subtitle">Dark chocolate</p>
+                        <button class="card--price">66 UAH</button>
+                    </div>
+                    <div class="card">
+                        <img class="card--img" src="./img/pineapple.png" alt="chocolate">
+                        <h3 class="card--title">pineapple</h3>
+                        <p class="card--subtitle">Dark chocolate</p>
+                        <button class="card--price">54 UAH</button>
+                    </div>
+                    <div class="card">
+                        <img class="card--img" src="./img/classic.png" alt="chocolate">
+                        <h3 class="card--title">Classic</h3>
+                        <p class="card--subtitle">Milk chocolate</p>
+                        <button class="card--price">45 UAH</button>
+                    </div>
+                    <div class="card">
+                        <img class="card--img" src="./img/honey.png" alt="chocolate">
+                        <h3 class="card--title">honey</h3>
+                        <p class="card--subtitle">Milk chocolate</p>
+                        <button class="card--price">50 UAH</button>
+                    </div>
+                    <div class="card">
+                        <img class="card--img" src="./img/roasted.png" alt="chocolate">
+                        <h3 class="card--title">Roasted fruits</h3>
+                        <p class="card--subtitle">Dark chocolate</p>
+                        <button class="card--price">66 UAH</button>
+                    </div>
+                    <div class="card">
+                        <img class="card--img" src="./img/classicWhite.png" alt="chocolate">
+                        <h3 class="card--title">Classic</h3>
+                        <p class="card--subtitle">Milk chocolate</p>
+                        <button class="card--price">54 UAH</button>
+                    </div>
+                    <div class="card">
+                        <img class="card--img" src="./img/chocolate (1).png" alt="chocolate">
+                        <h3 class="card--title">orange</h3>
+                        <p class="card--subtitle">Dark chocolate</p>
+                        <button class="card--price">45 UAH</button>
+                    </div>
+                    <div class="card">
+                        <img class="card--img" src="./img/apple.png" alt="chocolate">
+                        <h3 class="card--title">APPLE&CRANBERRY</h3>
+                        <p class="card--subtitle">Milk chocolate</p>
+                        <button class="card--price">50 UAH</button>
+                    </div>
+                    <div class="card">
+                        <img class="card--img" src="./img/lime.png" alt="chocolate">
+                        <h3 class="card--title">lime&sea salt</h3>
+                        <p class="card--subtitle">Dark chocolate</p>
+                        <button class="card--price">66 UAH</button>
+                    </div>
+
+                </div>
+            </div>
+            </div>
+            <div class="dots-container" id="dots"></div>
+        </section>
+
+        <!-- <section class="products" id="products">
+            <h2 class="products_title">Our <span>pRODUCTS</span></h2>
+            <div class="products_slider">
+                <div class="products_slider--track">
+                    <div class="products_slider--track--card">
+                        <img src="img/product-first.png" alt="product">
+                        <h5 class="products_slider--track--card--title">orange</h5>
+                        <p class="products_slider--track--card--subtitle">Dark chocolate</p>
+                        <button class="products_slider--track--card--button">45 UAH</button>
+                    </div>
+                    <div class="products_slider--track--card">
+                        <img src="img/product-second.png" alt="product">
+                        <h5 class="products_slider--track--card--title">APPLE&CRANBERRY</h5>
+                        <p class="products_slider--track--card--subtitle">Milk chocolate</p>
+                        <button class="products_slider--track--card--button">50 UAH</button>
+                    </div>
+                    <div class="products_slider--track--card">
+                        <img src="img/product-third.png" alt="product">
+                        <h5 class="products_slider--track--card--title">lime&sea salt</h5>
+                        <p class="products_slider--track--card--subtitle">Dark chocolate</p>
+                        <button class="products_slider--track--card--button">66 UAH</button>
+                    </div>
+                    <div class="products_slider--track--card">
+                        <img src="img/product-fourth.png" alt="product">
+                        <h5 class="products_slider--track--card--title">pineapple</h5>
+                        <p class="products_slider--track--card--subtitle">Dark chocolate</p>
+                        <button class="products_slider--track--card--button">54 UAH</button>
+                    </div>
+                    <div class="products_slider--track--card">
+                        <img src="img/product-fifth.png" alt="product">
+                        <h5 class="products_slider--track--card--title">Classic</h5>
+                        <p class="products_slider--track--card--subtitle">Milk chocolate</p>
+                        <button class="products_slider--track--card--button">45 UAH</button>
+                    </div>
+                    <div class="products_slider--track--card">
+                        <img src="img/product-sixth.png" alt="product">
+                        <h5 class="products_slider--track--card--title">honey</h5>
+                        <p class="products_slider--track--card--subtitle">Milk chocolate</p>
+                        <button class="products_slider--track--card--button">50 UAH</button>
+                    </div>
+                    <div class="products_slider--track--card">
+                        <img src="img/product-seventh.png" alt="product">
+                        <h5 class="products_slider--track--card--title">Roasted fruits</h5>
+                        <p class="products_slider--track--card--subtitle">Dark chocolate</p>
+                        <button class="products_slider--track--card--button">66 UAH</button>
+                    </div>
+                    <div class="products_slider--track--card">
+                        <img src="img/product-eighth.png" alt="product">
+                        <h5 class="products_slider--track--card--title">Classic</h5>
+                        <p class="products_slider--track--card--subtitle">White chocolate</p>
+                        <button class="products_slider--track--card--button">54 UAH</button>
+                    </div>
+                </div>
+            </div>
+            <div class="products_dots"></div>
+        </section> -->
+
+
+        <section class="sellers">
+            <h2 class="sellers--title"> <span>tOp</span> Sellers</h2>
+            <div class="sellers_container">
+                <img class="sellers_container_card1" src="./img/sellers1.png" alt="chocolate">
+                <img class="sellers_container_card2" src="./img/sellers2.png" alt="chocolate">
+                <img class="sellers_container_card3" src="./img/sellers3.png" alt="chocolate">
+            </div>
+            <div class="sellers_bottom">
+                <p class="sellers_bottom--title">Crazy enough chocolate originates from a bean just like the coffee bean
+                    called Cacao. Cacao has been
+                    around for thousands of years and was first discovered by the Native American tribe called the
+                    Mayans.</p>
+                <button id="openModal" class="buy-now-btn">Buy now</button>
+
+            </div>
+
+            <div id="modalOverlay" class="modal-overlay">
+                <div class="modal-content">
+                    <span id="closeModal" class="close-btn">&times;</span>
+
+                    <h2>BUY <span>NOW</span></h2>
+
+                    <form>
+                        <div class="product-selection">
+                        </div>
+                        <input type="text" placeholder="Name" required>
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+
+        <section>
+            <div class="testimonial-section">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <div class="avatar">
+                                    <img src="https://via.placeholder.com/100" alt="Victoria">
+                                </div>
+                                <h3>Victoria Dobrzhanska</h3>
+                                <p>I love this chocolate bar. Perfect combination of light crispy wafer, covered in a
+                                    thin layer chocolate.</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <div class="avatar">
+                                    <img src="https://via.placeholder.com/100" alt="Nazar">
+                                </div>
+                                <h3>Nazar Babenko</h3>
+                                <p>This chocolate confection is a delight! A delight! The wafer is light and crisp, the
+                                    hazelnut cream is smooth, and the chocolate is good.</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <div class="avatar">
+                                    <img src="https://via.placeholder.com/100" alt="Olena">
+                                </div>
+                                <h3>Olena Kampusch</h3>
+                                <p>Chocolate is a family favourite treat. Love the delicious smooth chocolate and the
+                                    creaminess inside. The wafer is soft but crunchy.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="explore">
+            <div class="explore_container">
+                <h2 class="explore_container--title">exPLORE OUR NEW CHOCOLATE FIRST</h2>
+                <p class="explore_container--text">From the velvety texture to the rich and complex flavor, our New Chocolate is a true indulgence that
+                    will leave you craving more. Made with only the finest ingredients and handcrafted with the utmost
+                    care, each piece is a work of art that is sure to please.</p>
+                <button class="explore_container--button">Subscribe++</button>
+            </div>
+        </section>
+
     </main>
+    <script src="./script.js"></script>
+    <script src="./script2.js"></script>
+    <script src="./modal.js"></script>
+    <script src="./app.js"></script>
 </body>
 
 </html>

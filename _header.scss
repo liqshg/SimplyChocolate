@@ -112,6 +112,12 @@
                     border: none;
                     border-radius: 100px;
                     padding: 14px 40px;
+
+                    &:hover {
+                        background-color: #FCF1E0;
+                        color: #FD9222;
+                        transition: 0.3s ease-in-out;
+                    }
                 }
 
 
@@ -126,6 +132,12 @@
                     border: 1px solid #FFFFFF;
                     border-radius: 100px;
                     padding: 14px 40px;
+
+                    &:hover {
+                        border: 1px solid #FD9222;
+                        color: #FD9222;
+                        transition: 0.3s ease-in-out;
+                    }
                 }
             }
         }
@@ -139,6 +151,23 @@
             position: absolute;
             right: 40px;
             bottom: 40px;
+
+            &:hover {
+                .header_home_absolute--text{
+                    color: #FD9222;
+                    transition: 0.3s ease-in-out;
+                }
+
+                .header_home_absolute--button ellipse {
+                    fill: #FD9222;
+                    transition: 0.3s ease-in-out;
+                }
+
+                .header_home_absolute--button path {
+                    fill: #FFFFFF;
+                    transition: 0.3s ease-in-out;
+                }
+            }
 
             &--text {
                 font-family: Montserrat;
