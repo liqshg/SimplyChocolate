@@ -1,52 +1,3 @@
-// const track = document.getElementById('track');
-//     const dotsContainer = document.getElementById('dots');
-//     const cards = document.querySelectorAll('.card');
-    
-//     let currentIndex = 0;
-//     const totalCards = cards.length;
-//     const visibleCards = 4; // Сколько карточек видим одновременно
-//     const maxIndex = totalCards - visibleCards; // Максимальный индекс для листания
-
-//     // 1. Создаем точки (количество точек = количеству возможных шагов)
-//     for (let i = 0; i <= maxIndex; i++) {
-//         const dot = document.createElement('div');
-//         dot.classList.add('dot');
-//         if (i === 0) dot.classList.add('active');
-        
-//         dot.addEventListener('click', () => {
-//             currentIndex = i;
-//             updateSlider();
-//         });
-//         dotsContainer.appendChild(dot);
-//     }
-
-//     const dots = document.querySelectorAll('.dot');
-
-//     function updateSlider() {
-//         const cardWidth = cards[0].offsetWidth + 20; // ширина + gap
-//         track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-        
-//         // Обновляем активную точку
-//         dots.forEach((dot, index) => {
-//             dot.classList.toggle('active', index === currentIndex);
-//         });
-//     }
-
-//     // Автоматическое бесконечное листание по одной карточке
-//     setInterval(() => {
-//         currentIndex++;
-//         if (currentIndex > maxIndex) {
-//             currentIndex = 0; // Возврат в начало
-//         }
-//         updateSlider();
-//     }, 4000);
-
-//     // Корректная работа при изменении размера экрана
-//     window.addEventListener('resize', updateSlider);
-
-
-
-
 const track = document.getElementById('track');
 const dotsContainer = document.getElementById('dots');
 const cards = document.querySelectorAll('.card');
@@ -153,6 +104,8 @@ window.addEventListener('mouseup', (e) => {
     
     updateSlider(); // Возвращаем плавность и фиксируем позицию
     startAutoPlay();
+    
+    
 });
 
 window.addEventListener('resize', updateSlider);
@@ -164,127 +117,5 @@ window.addEventListener('resize', updateSlider);
 
 
 
-// // slider
-// document.addEventListener('DOMContentLoaded', () => {
 
-//     const track = document.querySelector('.products_slider--track');
-//     const originalCards = document.querySelectorAll('.products_slider--track--card');
-//     const dotsContainer = document.querySelector('.products_dots');
 
-//     if (!track || !originalCards.length || !dotsContainer) return;
-
-//     const gap = 18;
-//     const visibleCards = 4;
-//     const cardWidth = originalCards[0].offsetWidth + gap;
-
-//     let autoplayInterval;
-
-//     // CLONE cards at end
-//     originalCards.forEach(card => {
-//         const clone = card.cloneNode(true);
-//         track.appendChild(clone);
-//     });
-
-//     // CLONE cards at start
-//     originalCards.forEach(card => {
-//         const clone = card.cloneNode(true);
-//         track.insertBefore(clone, track.firstChild);
-//     });
-
-//     const totalCards = originalCards.length;
-
-//     // START from real first card
-//     track.scrollLeft = totalCards * cardWidth;
-
-//     // CREATE DOTS
-//     originalCards.forEach((_, i) => {
-
-//         const dot = document.createElement('div');
-//         dot.classList.add('products_dots-dot');
-
-//         if (i === 0)
-//             dot.classList.add('active');
-
-//         dot.addEventListener('click', () => {
-
-//             stopAutoplay();
-
-//             track.scrollTo({
-//                 left: (i + totalCards) * cardWidth,
-//                 behavior: 'smooth'
-//             });
-
-//             startAutoplay();
-
-//         });
-
-//         dotsContainer.appendChild(dot);
-
-//     });
-
-//     const dots = document.querySelectorAll('.products_dots-dot');
-
-//     // UPDATE dots
-//     function updateDots() {
-
-//         const index =
-//             Math.round(track.scrollLeft / cardWidth) % totalCards;
-
-//         dots.forEach(dot =>
-//             dot.classList.remove('active'));
-
-//         dots[index].classList.add('active');
-
-//     }
-
-//     // INFINITE LOOP LOGIC
-//     track.addEventListener('scroll', () => {
-
-//         const scrollLeft = track.scrollLeft;
-//         const totalWidth = totalCards * cardWidth;
-
-//         if (scrollLeft <= cardWidth) {
-
-//             track.scrollLeft += totalWidth;
-
-//         }
-
-//         if (scrollLeft >= totalWidth * 2) {
-
-//             track.scrollLeft -= totalWidth;
-
-//         }
-
-//         updateDots();
-
-//     });
-
-//     // AUTOPLAY
-//     function startAutoplay() {
-
-//         autoplayInterval = setInterval(() => {
-
-//             track.scrollBy({
-//                 left: cardWidth,
-//                 behavior: 'smooth'
-//             });
-
-//         }, 3000);
-
-//     }
-
-//     function stopAutoplay() {
-//         clearInterval(autoplayInterval);
-//     }
-
-//     startAutoplay();
-
-//     // PAUSE on hover
-//     track.addEventListener('mouseenter', stopAutoplay);
-//     track.addEventListener('mouseleave', startAutoplay);
-
-//     // PAUSE on touch
-//     track.addEventListener('touchstart', stopAutoplay);
-//     track.addEventListener('touchend', startAutoplay);
-
-// });

@@ -33,12 +33,20 @@
         }
 
         .made_container {
-            display: grid;
-            grid-template-columns: 1fr;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             margin: 0 auto;
             max-width: 614px;
             gap: 20px;
             padding-bottom: 100px;
+
+            .made_container--left{
+                max-width: 614px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
 
             &--left--video {
                 width: 614px;
@@ -167,26 +175,30 @@
         }
     }
 
-    // main{
-    //      .products {
-    //     padding-left: 20px;
-    //     padding-right: 20px;
-    //     margin-bottom: 72px;
+    main {
+        //      .products {
+        //     padding-left: 20px;
+        //     padding-right: 20px;
+        //     margin-bottom: 72px;
 
-    //     &_slider {
-    //         max-width: 335px;
-    //         margin-top: 32px;
+        //     &_slider {
+        //         max-width: 335px;
+        //         margin-top: 32px;
 
-    //         &--track {
+        //         &--track {
 
-    //             &--card {
-    //                 flex: 0 0 335px;
-    //                 width: 335px;
-    //             }
-    //         }
-    //     }
-    // }
-    // }
+        //             &--card {
+        //                 flex: 0 0 335px;
+        //                 width: 335px;
+        //             }
+        //         }
+        //     }
+        // }
+
+        .explore{
+            background-image: url("./img/Subcribe\ \(1\).png");
+        }
+    }
 
 }
 
@@ -289,6 +301,12 @@
         .header_home_absolute {
             left: 20px;
             bottom: 20px;
+            max-width: 107px;
+
+            &--button svg{
+                width: 28px;
+                height: 28px;
+            }
         }
     }
 
@@ -396,6 +414,31 @@
     }
 }
 
+@media(max-width:490px) {
+    main {
+        .explore{
+            background-image: url("./img/Subcribe\ \(2\).png");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .explore_container--text{
+            width: 326px;
+        }
+
+        .explore_container--title{
+            font-size: 24px;
+        }
+
+        .explore_container--button{
+            font-size: 14px;
+            padding: 12px 28px;
+            max-width: 128px;
+        }
+        
+    }
+}
+
 @media (max-width:375px) {
     body {
         .header_home {
@@ -403,5 +446,11 @@
         }
 
 
+    }
+
+    main {
+        .slider-container {
+            max-width: 270px;
+        }
     }
 }

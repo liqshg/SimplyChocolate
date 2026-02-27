@@ -45,8 +45,28 @@
                 </svg>
             </div>
             <div class="header_top--burger" id="openmenu">
-                <button class="header_top--burger"><img src="./img/menu-03.svg" alt="brgr"></button>
+                <button class="header_top--burger"><img src="./img/menu-03.svg" alt="brgr-menu" id="openMenu"></button>
             </div>
+
+            <div class="mobile-menu" id="mobileMenu">
+                <button class="close" id="closeMenu"><img src="./img/x.png" alt=""></button>
+
+                <nav class="menu-nav">
+                    <a href="#">Home</a>
+                    <a href="#">How it’s made?</a>
+                    <a href="#">Our products</a>
+                    <a href="#">Top sellers</a>
+                    <a href="#">Chocolate is loved</a>
+                </nav>
+
+
+                <div class="menu-footer--socials">
+                    <img src="./img/instagram.png" alt="Instagram">
+                    <img src="./img/twitter.png" alt="Twitter">
+                </div>
+            </div>
+
+
         </div>
         <div class="header_home">
             <div class="header_home--line"></div>
@@ -72,7 +92,7 @@
             </div>
         </div>
     </header>
-    <div class="header_top--menu" id="mobilemenu"></div>
+
     <main>
         <section class="about">
             <div class="about_container">
@@ -323,66 +343,10 @@
 
                 </div>
             </div>
-            </div>
             <div class="dots-container" id="dots"></div>
         </section>
 
-        <!-- <section class="products" id="products">
-            <h2 class="products_title">Our <span>pRODUCTS</span></h2>
-            <div class="products_slider">
-                <div class="products_slider--track">
-                    <div class="products_slider--track--card">
-                        <img src="img/product-first.png" alt="product">
-                        <h5 class="products_slider--track--card--title">orange</h5>
-                        <p class="products_slider--track--card--subtitle">Dark chocolate</p>
-                        <button class="products_slider--track--card--button">45 UAH</button>
-                    </div>
-                    <div class="products_slider--track--card">
-                        <img src="img/product-second.png" alt="product">
-                        <h5 class="products_slider--track--card--title">APPLE&CRANBERRY</h5>
-                        <p class="products_slider--track--card--subtitle">Milk chocolate</p>
-                        <button class="products_slider--track--card--button">50 UAH</button>
-                    </div>
-                    <div class="products_slider--track--card">
-                        <img src="img/product-third.png" alt="product">
-                        <h5 class="products_slider--track--card--title">lime&sea salt</h5>
-                        <p class="products_slider--track--card--subtitle">Dark chocolate</p>
-                        <button class="products_slider--track--card--button">66 UAH</button>
-                    </div>
-                    <div class="products_slider--track--card">
-                        <img src="img/product-fourth.png" alt="product">
-                        <h5 class="products_slider--track--card--title">pineapple</h5>
-                        <p class="products_slider--track--card--subtitle">Dark chocolate</p>
-                        <button class="products_slider--track--card--button">54 UAH</button>
-                    </div>
-                    <div class="products_slider--track--card">
-                        <img src="img/product-fifth.png" alt="product">
-                        <h5 class="products_slider--track--card--title">Classic</h5>
-                        <p class="products_slider--track--card--subtitle">Milk chocolate</p>
-                        <button class="products_slider--track--card--button">45 UAH</button>
-                    </div>
-                    <div class="products_slider--track--card">
-                        <img src="img/product-sixth.png" alt="product">
-                        <h5 class="products_slider--track--card--title">honey</h5>
-                        <p class="products_slider--track--card--subtitle">Milk chocolate</p>
-                        <button class="products_slider--track--card--button">50 UAH</button>
-                    </div>
-                    <div class="products_slider--track--card">
-                        <img src="img/product-seventh.png" alt="product">
-                        <h5 class="products_slider--track--card--title">Roasted fruits</h5>
-                        <p class="products_slider--track--card--subtitle">Dark chocolate</p>
-                        <button class="products_slider--track--card--button">66 UAH</button>
-                    </div>
-                    <div class="products_slider--track--card">
-                        <img src="img/product-eighth.png" alt="product">
-                        <h5 class="products_slider--track--card--title">Classic</h5>
-                        <p class="products_slider--track--card--subtitle">White chocolate</p>
-                        <button class="products_slider--track--card--button">54 UAH</button>
-                    </div>
-                </div>
-            </div>
-            <div class="products_dots"></div>
-        </section> -->
+    
 
 
         <section class="sellers">
@@ -397,86 +361,81 @@
                     called Cacao. Cacao has been
                     around for thousands of years and was first discovered by the Native American tribe called the
                     Mayans.</p>
-                <button id="openModal" class="buy-now-btn">Buy now</button>
+                <button class="sellers_bottom--button" data-modal-open>Buy now</button>
 
-            </div>
 
-            <div id="modalOverlay" class="modal-overlay">
-                <div class="modal-content">
-                    <span id="closeModal" class="close-btn">&times;</span>
-
-                    <h2>BUY <span>NOW</span></h2>
-
-                    <form>
-                        <div class="product-selection">
+                <div class="backdrop is-hidden" data-modal>
+                    <div class="modal_window">
+                        <div class="modal_window-close">
+                            <button class="modal_window-close-button" data-modal-close><img
+                                    class="modal_window-close-button-img" src="./img/x-close.png" alt="x"></button>
                         </div>
-                        <input type="text" placeholder="Name" required>
-                        <input type="email" placeholder="Enter your email" required>
-                        <button type="submit" class="submit-btn">Submit</button>
-                    </form>
+                        <h2 class="modal_window-title">bUY nOW</h2>
+                        <div>
+                            <div>
+                                <img src="./img/modal-card1.png" alt="">
+                                <button>100 g</button>
+                            </div>
+                            <div>
+                                <img src="./img/modal-card2.png" alt="">
+                                <button>200 g</button>
+                            </div>
+                            <div>
+                                <img src="./img/modal-card3.png" alt="">
+                                <button>300 g</button>
+                            </div>
+                        </div>
+                        <form class="modal_window-form">
+                            <label class="modal_window-form-input_label">Ім'я</label>
+                            <input class="modal_window-form-input_input modal_window-form-input_input-name1" type="text"
+                                required>
+                            <label class="modal_window-form-input_label">Телефон</label>
+                            <input class="modal_window-form-input_input modal_window-form-input_input-name2" type="text"
+                                required>
+                            <label class="modal_window-form-input_label">Пошта</label>
+                            <input class="modal_window-form-input_input modal_window-form-input_input-name3" type="text"
+                                required>
+                            <label class="modal_window-form-input_label">Коментар</label>
+                            <textarea class="modal_window-form-input_textarea" placeholder="Введіть текст"></textarea>
+                        </form>
+                        <div class="modal_window-accept">
+                            <label class="modal_window-accept-box">
+                                <input class="modal_window-accept-box-input" type="checkbox">
+                                <p class="modal_window-accept-box-text">Погоджуюся з розсилкою та приймаю <span>Умови
+                                        договору</span> </p>
+                            </label>
+                        </div>
+                        <div class="modal_window-button" data-modal-close>
+                            <button class="modal_window-button-send">Відправити</button>
+                        </div>
+                    </div>
                 </div>
+
             </div>
+
+            
 
         </section>
 
         <section>
-            <div class="testimonial-section">
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
 
-                        <div class="swiper-slide">
-                            <div class="testimonial-card">
-                                <div class="avatar">
-                                    <img src="https://via.placeholder.com/100" alt="Victoria">
-                                </div>
-                                <h3>Victoria Dobrzhanska</h3>
-                                <p>I love this chocolate bar. Perfect combination of light crispy wafer, covered in a
-                                    thin layer chocolate.</p>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-card">
-                                <div class="avatar">
-                                    <img src="https://via.placeholder.com/100" alt="Nazar">
-                                </div>
-                                <h3>Nazar Babenko</h3>
-                                <p>This chocolate confection is a delight! A delight! The wafer is light and crisp, the
-                                    hazelnut cream is smooth, and the chocolate is good.</p>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-card">
-                                <div class="avatar">
-                                    <img src="https://via.placeholder.com/100" alt="Olena">
-                                </div>
-                                <h3>Olena Kampusch</h3>
-                                <p>Chocolate is a family favourite treat. Love the delicious smooth chocolate and the
-                                    creaminess inside. The wafer is soft but crunchy.</p>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-            </div>
         </section>
 
         <section class="explore">
             <div class="explore_container">
                 <h2 class="explore_container--title">exPLORE OUR NEW CHOCOLATE FIRST</h2>
-                <p class="explore_container--text">From the velvety texture to the rich and complex flavor, our New Chocolate is a true indulgence that
+                <p class="explore_container--text">From the velvety texture to the rich and complex flavor, our New
+                    Chocolate is a true indulgence that
                     will leave you craving more. Made with only the finest ingredients and handcrafted with the utmost
                     care, each piece is a work of art that is sure to please.</p>
-                <button class="explore_container--button">Subscribe++</button>
+                <button class="explore_container--button">Subscribe</button>
             </div>
         </section>
 
     </main>
     <script src="./script.js"></script>
     <script src="./script2.js"></script>
-    <script src="./modal.js"></script>
+    <script src="./brgr.js"></script>
     <script src="./app.js"></script>
 </body>
 

@@ -636,7 +636,7 @@ $orange: #FD9222;
             width: 415px;
         }
 
-        .buy-now-btn {
+        &--button {
             font-family: Montserrat;
             font-weight: 600;
             font-size: 18px;
@@ -656,44 +656,210 @@ $orange: #FD9222;
 
 
 
-.modal-overlay {
-    display: none;
-    /* Скрыто по умолчанию */
+.backdrop {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Полупрозрачный черный */
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Контентное окно */
-.modal-content {
-    background-color: white;
-    padding: 40px;
-    border-radius: 20px;
-    position: relative;
-    max-width: 500px;
-    width: 90%;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Кнопка закрытия (крестик) */
-.close-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-/* Показываем модалку при добавлении класса через JS */
-.modal-overlay.active {
+    inset: 0;
+    background: rgba(0, 0, 0, .5);
     display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.is-hidden {
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+        /*display: none;*/
+    }
+
+    & .modal_window {
+        background: #FFFFFF;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 528px;
+        padding: 40px;
+        position: relative;
+        
+            height: 658px;
+            overflow-y: auto;
+
+        &-close-button {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background-color: transparent;
+            border: none;
+        }
+
+        &-title {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 23px;
+            text-align: center;
+            letter-spacing: 0.03em;
+            color: #212121;
+            padding-bottom: 12px;
+        }
+
+        &-form {
+            width: 100%;
+            max-width: 448px;
+            display: flex;
+            flex-direction: column;
+
+            &-input_label {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 14px;
+                letter-spacing: 0.01em;
+                color: #757575;
+                padding-bottom: 4px;
+            }
+
+            &-input_input {
+                margin-bottom: 10px;
+                padding: 11px 0 11px 30px;
+                border: 1px solid #21212133;
+                border-radius: 4px;
+
+                &:focus {
+                    outline: none;
+                    border: none;
+                    border: 2px solid #2196F3;
+                }
+
+                &-name1 {
+                    background-image: url("./img/person-black-18dp\ 1\ \(1\).svg");
+                    background-repeat: no-repeat;
+                    background-position: 12px center;
+
+                    &:active .modal_window-form-input_input-name1:focus {
+                        background-image: url("./img/person-black-18dp\ 1\ \(2\).svg");
+                    }
+                }
+
+                &-name2 {
+                    background-image: url("./img/phone-black-18dp\ 1.svg");
+                    background-repeat: no-repeat;
+                    background-position: 12px center;
+
+                    &:active,
+                    .modal_window-form-input_input-name2:focus {
+                        background-image: url("./img/phone-black-18dp\ 1\ \(1\).svg");
+                    }
+                }
+
+                &-name3 {
+                    background-image: url("./img/email-black-18dp\ 1.svg");
+                    background-repeat: no-repeat;
+                    background-position: 12px center;
+
+                    &:active,
+                    .modal_window-form-input_input-name3:focus {
+                        background-image: url("./img/email-black-18dp\ 1\ \(1\).svg");
+                    }
+                }
+            }
+
+
+            &-input_textarea {
+                margin-bottom: 20px;
+                width: 448px;
+                height: 120px;
+                padding-left: 16px;
+                padding-top: 12px;
+                font-family: Roboto;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 100%;
+                letter-spacing: 1%;
+                resize: none;
+                border: 1px solid rgba(33, 33, 33, 0.2);
+                border-radius: 4px;
+
+                &:focus {
+                    outline: none;
+                    border: none;
+                    border: 2px solid #2196F3;
+                }
+            }
+        }
+
+        &-accept {
+            width: 100%;
+            max-width: 423px;
+            margin-bottom: 30px;
+
+            &-box {
+                max-width: 390px;
+                display: flex;
+                margin: 0 auto;
+                justify-content: space-between;
+                align-items: center;
+
+                &-input {
+                    width: 16px;
+                    height: 15px;
+                }
+
+                &-text {
+                    font-family: Roboto;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 24px;
+                    letter-spacing: 3%;
+                    color: #757575;
+
+                    & span {
+                        font-family: Roboto;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 24px;
+                        letter-spacing: 3%;
+                        text-decoration: underline;
+                        text-decoration-style: solid;
+                        text-decoration-thickness: 0%;
+                        color: #2196F3;
+                    }
+                }
+            }
+        }
+
+        &-button-send {
+            background-color: #2196F3;
+            box-shadow: 0px 4px 4px 0px #00000026;
+            width: 100%;
+            max-width: 200px;
+            padding: 10px 52px;
+            border-radius: 4px;
+            border: none;
+            font-family: Roboto;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 30px;
+            letter-spacing: 6%;
+            text-align: center;
+            vertical-align: middle;
+            color: #FFFFFF;
+        }
+    }
+
+    & ::-moz-selection {
+        background: #b3d4fc;
+        text-shadow: none;
+    }
+
+    & ::selection {
+        background: #b3d4fc;
+        text-shadow: none;
+    }
 }
 
 
@@ -702,77 +868,6 @@ $orange: #FD9222;
 
 
 
-
-body {
-    background-color: #f8f9fa;
-}
-
-.testimonial-section {
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.swiper {
-    padding-bottom: 50px !important;
-}
-
-.testimonial-card {
-    background: #fff;
-    border-radius: 20px;
-    border: 1px solid #eee;
-    padding: 40px 20px 30px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    margin: 40px 10px;
-    position: relative;
-}
-
-.avatar {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    overflow: hidden;
-    position: absolute;
-    top: -50px;
-    left: 50%;
-    transform: translateX(-50%);
-    border: 2px solid #fff;
-}
-
-.avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.testimonial-card h3 {
-    margin-top: 20px;
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-.testimonial-card p {
-    color: #666;
-    line-height: 1.5;
-    font-size: 0.95rem;
-    margin-top: 15px;
-}
-
-/* Стилизация оранжевых точек (pagination) */
-.swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
-    background: #ddd !important;
-    opacity: 1 !important;
-}
-
-.swiper-pagination-bullet-active {
-    background: #ff9800 !important;
-    /* Оранжевый цвет как на фото */
-    width: 30px;
-    /* Делаем активную точку длиннее */
-    border-radius: 10px;
-}
 
 
 
