@@ -459,7 +459,7 @@ $orange: #FD9222;
 
 .products {
     width: 100%;
-    max-width: 1136px;
+    max-width: 1140px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -487,7 +487,7 @@ $orange: #FD9222;
 
 .slider-container {
     width: 100%;
-    max-width: 1136px;
+    max-width: 1140px;
     overflow: hidden;
 }
 
@@ -656,6 +656,11 @@ $orange: #FD9222;
 
 
 
+::-webkit-scrollbar {
+    display: none;
+}
+
+
 .backdrop {
     position: fixed;
     inset: 0;
@@ -674,7 +679,7 @@ $orange: #FD9222;
     & .modal_window {
         background: #FFFFFF;
         box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-        border-radius: 4px;
+        border-radius: 15px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -682,9 +687,11 @@ $orange: #FD9222;
         max-width: 528px;
         padding: 40px;
         position: relative;
-        
-            height: 658px;
-            overflow-y: auto;
+
+        height: 658px;
+        overflow-y: auto;
+
+        &-close {}
 
         &-close-button {
             position: absolute;
@@ -692,6 +699,9 @@ $orange: #FD9222;
             right: 8px;
             background-color: transparent;
             border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         &-title {
@@ -864,7 +874,21 @@ $orange: #FD9222;
 
 
 
+.popup {
+    background-color: #FD9222;
+    width: 516px;
+    height: 414px;
+    border-radius: 15px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
+    &.hidden{
+        display: none;
+    }
+
+}
 
 
 

@@ -612,7 +612,7 @@
 
 .products {
   width: 100%;
-  max-width: 1136px;
+  max-width: 1140px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -638,7 +638,7 @@
 
 .slider-container {
   width: 100%;
-  max-width: 1136px;
+  max-width: 1140px;
   overflow: hidden;
 }
 
@@ -791,6 +791,10 @@
   border: none;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .backdrop {
   position: fixed;
   inset: 0;
@@ -808,7 +812,7 @@
 .backdrop .modal_window {
   background: #FFFFFF;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -825,6 +829,9 @@
   right: 8px;
   background-color: transparent;
   border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .backdrop .modal_window-title {
   font-family: "Roboto";
@@ -969,6 +976,20 @@
 .backdrop ::selection {
   background: #b3d4fc;
   text-shadow: none;
+}
+
+.popup {
+  background-color: #FD9222;
+  width: 516px;
+  height: 414px;
+  border-radius: 15px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.popup.hidden {
+  display: none;
 }
 
 .explore {
@@ -1208,7 +1229,7 @@
     width: 335px;
     height: 464px;
   }
-  main .buy-now-btn {
+  main .sellers_bottom--button {
     order: 4;
     margin: 0 auto;
   }

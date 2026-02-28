@@ -272,7 +272,7 @@
         <section class="products">
             <h2 class="products--title">Our <span>Products</span></h2>
 
-            <div class="slider-container">
+            <div class="slider-container" id="slider-product">
                 <div class="slider-track" id="track">
                     <div class="card">
                         <img class="card--img" src="./img/chocolate (1).png" alt="chocolate">
@@ -346,7 +346,7 @@
             <div class="dots-container" id="dots"></div>
         </section>
 
-    
+
 
 
         <section class="sellers">
@@ -366,10 +366,16 @@
 
                 <div class="backdrop is-hidden" data-modal>
                     <div class="modal_window">
-                        <div class="modal_window-close">
-                            <button class="modal_window-close-button" data-modal-close><img
-                                    class="modal_window-close-button-img" src="./img/x-close.png" alt="x"></button>
-                        </div>
+                        <button class="modal_window-close-button" data-modal-close>
+                            <svg class="modal_window-close-button-img" xmlns="http://www.w3.org/2000/svg" width="28"
+                                height="28" viewBox="0 0 28 28" fill="none">
+                                <path d="M21 7L7 21" stroke="#111111" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M7 7L21 21" stroke="#111111" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+
                         <h2 class="modal_window-title">bUY nOW</h2>
                         <div>
                             <div>
@@ -405,15 +411,23 @@
                                         договору</span> </p>
                             </label>
                         </div>
-                        <div class="modal_window-button" data-modal-close>
+                        <div class="modal_window-button" data-modal-send>
                             <button class="modal_window-button-send">Відправити</button>
                         </div>
                     </div>
+                    
                 </div>
+
+
+
+<div class="popup hidden" popup-send>
+    <button popup-close>X</button>
+</div>
+            
 
             </div>
 
-            
+
 
         </section>
 

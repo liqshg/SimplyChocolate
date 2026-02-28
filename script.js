@@ -2,7 +2,19 @@ const track = document.getElementById('track');
 const dotsContainer = document.getElementById('dots');
 const cards = document.querySelectorAll('.card');
 
-const originalCount = 8; 
+let gap = 20;
+let currentSlidesContainer = document.getElementById("slider-product");
+let currentSlidesContainerWidth = currentSlidesContainer.getBoundingClientRect().width;
+let fullSlides = Math.floor((currentSlidesContainerWidth + gap) / (cards[0].getBoundingClientRect().width + gap));
+
+console.log("fullSlides: ", fullSlides);
+
+currentSlidesContainer.style.width = (fullSlides * (cards[0].getBoundingClientRect().width + gap)) + "px";
+track.style.paddingLeft = gap/2 + "px";
+track.style.paddingLeft = "0px";
+let countSlides = cards.length;
+
+const originalCount = countSlides - fullSlides + 1; 
 let currentIndex = 0;
 let autoPlayInterval;
 
