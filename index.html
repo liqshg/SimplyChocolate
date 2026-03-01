@@ -342,8 +342,9 @@
                     </div>
 
                 </div>
+                <div class="dots-container" id="dots"></div>
             </div>
-            <div class="dots-container" id="dots"></div>
+
         </section>
 
 
@@ -376,54 +377,104 @@
                             </svg>
                         </button>
 
-                        <h2 class="modal_window-title">bUY nOW</h2>
-                        <div>
-                            <div>
-                                <img src="./img/modal-card1.png" alt="">
-                                <button>100 g</button>
+                        <h2 class="modal_window-title"> <span>bUY</span> nOW</h2>
+                        <div class="modal_window-cards">
+                            <div class="modal_window-cards-card">
+                                <img class="modal_window-cards-card-img" src="./img/modal-card1.png" alt="">
+                                <button class="modal_window-cards-card-button">100 g</button>
                             </div>
-                            <div>
-                                <img src="./img/modal-card2.png" alt="">
-                                <button>200 g</button>
+                            <div class="modal_window-cards-card">
+                                <img class="modal_window-cards-card-img" src="./img/modal-card2.png" alt="">
+                                <button class="modal_window-cards-card-button">200 g</button>
                             </div>
-                            <div>
-                                <img src="./img/modal-card3.png" alt="">
-                                <button>300 g</button>
+                            <div class="modal_window-cards-card">
+                                <img class="modal_window-cards-card-img" src="./img/modal-card3.png" alt="">
+                                <button class="modal_window-cards-card-button">300 g</button>
                             </div>
                         </div>
+
+                        <div class="slider-container2" id="slider-product2">
+                            <div class="slider-track2" id="track2">
+                                <div class="modal_window-cards-card2">
+                                    <img class="modal_window-cards-card-img" src="./img/modal-card1.png" alt="">
+                                    <button class="modal_window-cards-card-button">100 g</button>
+                                </div>
+                                <div class="modal_window-cards-card2">
+                                    <img class="modal_window-cards-card-img" src="./img/modal-card2.png" alt="">
+                                    <button class="modal_window-cards-card-button">200 g</button>
+                                </div>
+                                <div class="modal_window-cards-card2">
+                                    <img class="modal_window-cards-card-img" src="./img/modal-card3.png" alt="">
+                                    <button class="modal_window-cards-card-button">300 g</button>
+                                </div>
+                            </div>
+                            <div class="dots-container2" id="dots2"></div>
+                        </div>
+
                         <form class="modal_window-form">
-                            <label class="modal_window-form-input_label">Ім'я</label>
-                            <input class="modal_window-form-input_input modal_window-form-input_input-name1" type="text"
-                                required>
-                            <label class="modal_window-form-input_label">Телефон</label>
-                            <input class="modal_window-form-input_input modal_window-form-input_input-name2" type="text"
-                                required>
-                            <label class="modal_window-form-input_label">Пошта</label>
-                            <input class="modal_window-form-input_input modal_window-form-input_input-name3" type="text"
-                                required>
-                            <label class="modal_window-form-input_label">Коментар</label>
-                            <textarea class="modal_window-form-input_textarea" placeholder="Введіть текст"></textarea>
+                            <div class="modal_window-form-info">
+                                <label class="modal_window-form-info-label">Personal information</label>
+                                <div class="modal_window-form-info-box">
+                                    <input class="modal_window-form-info-box-input" id="name" type="text" placeholder="Name">
+                                    <input class="modal_window-form-info-box-input" id="surname" type="text"
+                                        placeholder="Surname">
+                                </div>
+                            </div>
+                            <div class="modal_window-form-email">
+                                <label class="modal_window-form-email-label">Email</label>
+                                <input class="modal_window-form-email-input" id="email" type="email"
+                                    placeholder="Enter your email">
+                            </div>
+
+                            <div class="modal_window-form-phone">
+                                <label class="modal_window-form-phone-label">Phone number</label>
+
+                                <div class="modal_window-form-phone-input-box">
+                                    <div class="modal_window-form-phone-input-box-left">
+                                        <img src="./img/ukraine.svg" alt="ukraine">
+                                        <p class="modal_window-form-phone-input-box-left-code">+380</p>
+                                    </div>
+                                    <div class="modal_window-form-phone-input-box-divide"></div>
+                                    <input class="modal_window-form-phone-input-box-tel" type="tel" id="tel"
+                                        placeholder="Phone number">
+                                </div>
+                            </div>
+                            <div class="modal_window-form-card">
+                                <label class="modal_window-form-card-label">Card number</label>
+                                <div class="modal_window-form-card-box">
+                                    <input class="modal_window-form-card-box-input" id="num" type="text"
+                                        placeholder="Enter card">
+                                    <img src="./img/Input right section.png" alt="">
+                                </div>
+
+                            </div>
+                            <div class="modal_window-form-comment">
+                                <label class="modal_window-form-comment-label">Comment</label>
+                                <textarea class="modal_window-form-comment-textarea" id="comment"
+                                    placeholder="Enter text"></textarea>
+                            </div>
+
                         </form>
-                        <div class="modal_window-accept">
-                            <label class="modal_window-accept-box">
-                                <input class="modal_window-accept-box-input" type="checkbox">
-                                <p class="modal_window-accept-box-text">Погоджуюся з розсилкою та приймаю <span>Умови
-                                        договору</span> </p>
-                            </label>
-                        </div>
                         <div class="modal_window-button" data-modal-send>
-                            <button class="modal_window-button-send">Відправити</button>
+                            <button class="modal_window-button-send">Submit</button>
                         </div>
                     </div>
-                    
+
                 </div>
 
 
+                <div id="overlay" class="popup_overlay"></div>
+                <div class="popup hidden" popup-send>
 
-<div class="popup hidden" popup-send>
-    <button popup-close>X</button>
-</div>
-            
+
+                    <button class="popup-close" popup-close><img src="./img/popup-x.svg" alt="x"></button>
+                    <div class="popup-box">
+                        <h2 class="popup-box-title">thank you!</h2>
+                        <p class="popup-box-text">We are glad that you ordered our chocolate and we are giving you a
+                            <span>20% </span> discount on all our products.</p>
+                    </div>
+                </div>
+
 
             </div>
 
