@@ -1,0 +1,112 @@
+.footer {
+    background-color: #1E1823;
+
+    &_container {
+        width: 100%;
+        margin: 0 auto;
+        max-width: 1136px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 50px 32px;
+
+
+        &_top {
+            width: 100%;
+            max-width: 1136px;
+            display: flex;
+            justify-content: space-between;
+
+            &--text {
+                font-family: Montserrat;
+                font-weight: 500;
+                font-style: Medium;
+                font-size: 28px;
+                line-height: 34px;
+                letter-spacing: -2%;
+                color: #FFFFFF;
+                width: 300px;
+
+                & span {
+                    color: #FD9222;
+                }
+            }
+
+            &--box {
+                width: 100%;
+                max-width: 239px;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+
+                &--info {
+                    width: 100%;
+                    max-width: 164px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+
+                    &--title {
+                        font-family: Montserrat;
+                        font-weight: 500;
+                        font-style: Medium;
+                        font-size: 14px;
+                        line-height: 18px;
+                        letter-spacing: 0%;
+                        text-align: center;
+                        color: #FFFFFF;
+                        padding-bottom: 14px;
+                    }
+
+                    &--text {
+                        font-family: Montserrat;
+                        font-weight: 400;
+                        font-style: Regular;
+                        font-size: 14px;
+                        line-height: 18px;
+                        letter-spacing: -2%;
+                        text-align: center;
+                        color: #FFFFFF;
+
+                        &:nth-child(2) {
+                            padding-top: 4px;
+                        }
+                    }
+                }
+
+                &--socials {
+                    width: 100%;
+                    max-width: 66px;
+                    display: flex;
+                    gap: 18px;
+                }
+            }
+        }
+
+        &_line {
+            width: 100%;
+            max-width: 1136px;
+            border: 1px solid #FFFFFF1A;
+            margin-top: 62px;
+            margin-bottom: 24px;
+        }
+
+        &_bottom {
+            width: 100%;
+            max-width: 532px;
+            display: flex;
+            gap: 24px;
+
+            &--link {
+                text-decoration: none;
+                font-family: Montserrat;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 16px;
+                letter-spacing: -2%;
+                vertical-align: middle;
+                color: #FFFFFF;
+            }
+        }
+    }
+}

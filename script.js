@@ -282,6 +282,146 @@ window.addEventListener('resize', updateSlider2);
 
 
 
+// N
+// E
+// W
+// S
+// L
+// I
+// D
+// E
+// R
+// 2
+
+
+
+const track3 = document.getElementById('loved_container');
+const dotsContainer3 = document.getElementById('dots3');
+const cards3 = document.querySelectorAll('.loved_container_card');
+let currentIndex3= 0;
+let autoPlayInterval3;
+let originalCount3;
+let allDots3;
+
+    
+
+    let countSlides3 = cards3.length;
+
+
+    originalCount3 = 4;
+    
+
+
+    // Создаем 8 точек
+    dotsContainer3.innerHTML = ''; // Очищаем контейнер для точек
+    for (let i = 0; i < originalCount3; i++) {
+        const dot3 = document.createElement('div');
+        dot3.classList.add('dot3');
+        if (i === 0) dot3.classList.add('active');
+        
+        dot3.onclick = () => {
+            if (i === originalCount3 - 1 && currentIndex3 === originalCount3 - 1) {
+                currentIndex3 = 0; 
+            } else {
+                currentIndex3 = i; 
+            }
+            console.log("dot3 clicked, index: ", i);
+            updateSlider3();
+            resetAutoPlay3();
+        };
+        dotsContainer3.appendChild(dot3);
+    }
+
+    allDots3 = document.querySelectorAll('.dot3');
+ 
+
+
+function updateSlider3() {
+    const cardWidth = cards3[0].getBoundingClientRect().width + 28; 
+    track3.style.transition = "transform 0.5s ease-in-out";
+    track3.style.transform = `translateX(-${currentIndex3 * cardWidth}px)`;
+    
+    allDots3.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentIndex3);
+    });
+}
+
+// // --- 1. АВТОМАТИЧЕСКОЕ ЛИСТАНИЕ ---
+function startAutoPlay3() {
+    autoPlayInterval3 = setInterval(() => {
+        currentIndex3++;
+        if (currentIndex3 >= originalCount3) {
+            currentIndex3 = 0; 
+        }
+        updateSlider3();
+    }, 3000);
+}
+
+function resetAutoPlay3() {
+    clearInterval(autoPlayInterval3);
+    startAutoPlay3();
+}
+
+startAutoPlay3();
+
+// --- 2. ИСПРАВЛЕННОЕ ЛИСТАНИЕ МЫШКОЙ ---
+let isDragging3 = false;
+let startX3 = 0;
+let currentX3 = 0;
+
+// Убираем стандартное поведение картинок, чтобы они не мешали тянуть
+track3.querySelectorAll('img').forEach(img => {
+    img.draggable = false;
+});
+
+track3.style.cursor = "grab";
+track3.style.userSelect = "none"; // Чтобы текст не выделялся
+
+track3.addEventListener('mousedown', (e) => {
+    isDragging3 = true;
+    startX3 = e.pageX;
+    track3.style.cursor = "grabbing";
+    track3.style.transition = "none"; // Отключаем плавность пока тянем
+    clearInterval(autoPlayInterval3); 
+});
+
+window.addEventListener('mousemove', (e) => {
+    if (!isDragging3) return;
+    e.preventDefault(); // Важно! Останавливает выделение и перетаскивание браузером
+    currentX3 = e.pageX;
+    const diff = currentX3 - startX3;
+    
+    const cardWidth = cards3[0].getBoundingClientRect().width + 28;
+    const currentTranslate = -(currentIndex3 * cardWidth) + diff;
+    
+    // Двигаем трек вслед за мышкой в реальном времени
+    track3.style.transform = `translateX(${currentTranslate}px)`;
+});
+
+window.addEventListener('mouseup', (e) => {
+    if (!isDragging3) return;
+    isDragging3 = false;
+    track3.style.cursor = "grab";
+    
+    const diff = e.pageX - startX3;
+
+    // Если протащили больше чем на 100px — листаем
+    if (diff < -100 && currentIndex3 < originalCount3 - 1) {
+        currentIndex3++;
+    } else if (diff > 100 && currentIndex3 > 0) {
+        currentIndex3--;
+    }
+    
+    updateSlider3(); // Возвращаем плавность и фиксируем позицию
+    startAutoPlay3();
+    
+    
+});
+
+window.addEventListener('resize', updateSlider3);
+//window.addEventListener('resize', initSlider);
+
+
 
 
 

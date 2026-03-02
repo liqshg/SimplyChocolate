@@ -498,6 +498,11 @@ $orange: #FD9222;
     overflow: clip;
 }
 
+.slider-container3 {
+    width: 1140px;
+    overflow: clip;
+}
+
 .slider-track {
     display: flex;
     transition: transform 0.5s ease-in-out;
@@ -600,7 +605,7 @@ $orange: #FD9222;
 }
 
 
-.dots-container2{
+.dots-container2 {
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -622,6 +627,28 @@ $orange: #FD9222;
     border-radius: 10px;
 }
 
+
+.dots-container3 {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 32px;
+}
+
+.dot3 {
+    width: 10px;
+    height: 10px;
+    background-color: var(--gray);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot3.active {
+    background-color: var(--orange);
+    width: 30px;
+    border-radius: 10px;
+}
 
 .sellers {
     width: 100%;
@@ -695,9 +722,7 @@ $orange: #FD9222;
 
 
 
-::-webkit-scrollbar {
-    display: none;
-}
+
 
 
 .backdrop {
@@ -707,12 +732,17 @@ $orange: #FD9222;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1;
 
     &.is-hidden {
         visibility: hidden;
         opacity: 0;
         pointer-events: none;
         /*display: none;*/
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
     }
 
     & .modal_window {
@@ -793,7 +823,7 @@ $orange: #FD9222;
             }
 
             &-card2 {
-                width:231px;
+                width: 231px;
                 background-color: #FFFFFF;
                 border: 1px solid #1111111A;
                 border-radius: 15px;
@@ -1210,77 +1240,172 @@ $orange: #FD9222;
 }
 
 #overlay {
-    display:none;
-  background: #000000;
-  opacity: 0.5;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  z-index: 49;
-  width: 100%;
-  height: 100%;
+    display: none;
+    background: #000000;
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 49;
+    width: 100%;
+    height: 100%;
 }
 
 
 
 
 
-    .explore {
-        background-image: url("./img/Subcribe.png");
-        background-repeat: no-repeat;
-        background-size: cover;
+.explore {
+    background-image: url("./img/Subcribe.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 
-        &_container {
+    &_container {
+        width: 100%;
+        max-width: 467px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        margin: 0 auto;
+        padding: 72px 0;
+        align-items: center;
+
+        &--title {
+            font-family: Montserrat;
+            font-weight: 600;
+            font-style: SemiBold;
+            font-size: 24px;
+            line-height: 28px;
+            letter-spacing: -3%;
+            text-align: center;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            width: 378px;
+        }
+
+        &--text {
+            font-family: Montserrat;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 14px;
+            line-height: 18px;
+            letter-spacing: -2%;
+            text-align: center;
+            color: #FFFFFF;
+        }
+
+        &--button {
             width: 100%;
-            max-width: 467px;
+            max-width: 172px;
+            background-color: #FD9222;
+            font-family: Montserrat;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: #FFFFFF;
+            padding: 14px 40px;
+            border: none;
+            border-radius: 100px;
+            cursor: pointer;
+        }
+    }
+}
+
+
+
+.loved {
+    width: 100%;
+    max-width: 1136px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 128px;
+
+    &--title {
+        font-family: Montserrat;
+        font-weight: 600;
+        font-style: SemiBold;
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: -3%;
+        text-align: center;
+        text-transform: uppercase;
+        color: #111111;
+        padding-bottom: 91px;
+
+        & span {
+            color: #FD9222;
+        }
+    }
+
+    &_container {
+        width: 100%;
+        max-width: 1136px;
+        display: flex;
+        gap: 28px;
+        transition: transform 0.5s ease-in-out;
+        align-items: stretch;
+        margin-top: 41px;
+
+        &_card {
+            width: 360px;
             display: flex;
             flex-direction: column;
-            gap: 24px;
-            margin: 0 auto;
-            padding: 72px 0;
             align-items: center;
+            background-color: #FFFFFF;
+            padding: 56px 24px 42px 24px;
+            border: 1px solid #1111111A;
+            box-shadow: 0px 9.05px 26.57px 0px #D7E4F940;
+            border-radius: 15px;
+            position: relative;
+
+            &--img {
+                position: absolute;
+                top: -42px;
+            }
 
             &--title {
                 font-family: Montserrat;
                 font-weight: 600;
-                font-style: SemiBold;
-                font-size: 24px;
-                line-height: 28px;
-                letter-spacing: -3%;
+                font-size: 18px;
+                line-height: 24px;
+                letter-spacing: 0%;
                 text-align: center;
-                text-transform: uppercase;
-                color: #FFFFFF;
-                width: 378px;
+                color: #111111;
             }
 
             &--text {
                 font-family: Montserrat;
                 font-weight: 400;
-                font-style: Regular;
                 font-size: 14px;
                 line-height: 18px;
                 letter-spacing: -2%;
                 text-align: center;
-                color: #FFFFFF;
-            }
-
-            &--button {
-                width: 100%;
-                max-width: 172px;
-                background-color: #FD9222;
-                font-family: Montserrat;
-                font-weight: 600;
-                font-size: 18px;
-                line-height: 100%;
-                letter-spacing: 0%;
-                color: #FFFFFF;
-                padding: 14px 40px;
-                border: none;
-                border-radius: 100px;
-                cursor: pointer;
+                color: #111111B2;
+                width: 312px;
+                padding-top: 20px;
             }
         }
     }
+
+    &--button {
+        margin-top: 50px;
+        font-family: Montserrat;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: #111111;
+        background-color: transparent;
+        width: 100%;
+        max-width: 222px;
+        border: 1px solid #FD9222;
+        border-radius: 100px;
+        padding: 14px 40px;
+    }
+}
