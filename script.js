@@ -20,6 +20,7 @@ let gap = 20;
     let countSlides = cards.length;
 
     originalCount = countSlides - fullSlides + 1; 
+    
     originalCount = 8
     
 

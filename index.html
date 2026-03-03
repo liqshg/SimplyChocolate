@@ -396,15 +396,15 @@
                         <div class="slider-container2" id="slider-product2">
                             <div class="slider-track2" id="track2">
                                 <div class="modal_window-cards-card2">
-                                    <img class="modal_window-cards-card-img" src="./img/modal-card1.png" alt="">
+                                    <img class="modal_window-cards-card-img" src="./img/buy-1.png" alt="">
                                     <button class="modal_window-cards-card-button">100 g</button>
                                 </div>
                                 <div class="modal_window-cards-card2">
-                                    <img class="modal_window-cards-card-img" src="./img/modal-card2.png" alt="">
+                                    <img class="modal_window-cards-card-img" src="./img/buy-2.png" alt="">
                                     <button class="modal_window-cards-card-button">200 g</button>
                                 </div>
                                 <div class="modal_window-cards-card2">
-                                    <img class="modal_window-cards-card-img" src="./img/modal-card3.png" alt="">
+                                    <img class="modal_window-cards-card-img" src="./img/buy-3.png" alt="">
                                     <button class="modal_window-cards-card-button">300 g</button>
                                 </div>
                             </div>
@@ -435,7 +435,8 @@
                                         <img src="./img/ukraine.svg" alt="ukraine">
                                         <p class="modal_window-form-phone-input-box-left-code">+380</p>
                                     </div>
-                                    <div class="modal_window-form-phone-input-box-divide"></div>
+                                    <div class="modal_window-form-phone-input-box-divide"><img
+                                            src="./img/Rectangle 240.png" alt=""></div>
                                     <input class="modal_window-form-phone-input-box-tel" type="tel" id="tel"
                                         placeholder="Phone number">
                                 </div>
@@ -465,7 +466,7 @@
 
 
                 <div id="overlay" class="popup_overlay"></div>
-                <div class="popup hidden" popup-send>
+                <div class="popup  overlay_presence hidden" popup-send>
 
 
                     <button class="popup-close" popup-close><img src="./img/popup-x.svg" alt="x"></button>
@@ -535,6 +536,50 @@
 
             <button class="loved--button" review-send>Leave a review</button>
 
+            <div class="backdrop2 is-hidden" data-modal2>
+                <div class="loved_modal">
+                    <button class="loved_modal-close-button" data-modal-close2>
+                        <svg class="loved_modal-close-button-img" xmlns="http://www.w3.org/2000/svg" width="28"
+                            height="28" viewBox="0 0 28 28" fill="none">
+                            <path d="M21 7L7 21" stroke="#111111" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M7 7L21 21" stroke="#111111" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <h2 class="loved_modal-title">LEAVE A REVIEW ABOUT <span>OUR CHOCOLATE</span> </h2>
+                    <form class="loved_modal-form" id="review-form">
+                        <input class="loved_modal-form-name-input" id="name2" type="name" placeholder="Name">
+                        <input class="loved_modal-form-email-input" id="email2" type="email" placeholder="Email">
+                        <div class="loved_modal-form-phone-input-box">
+                            <div class="loved_modal-form-phone-input-box-left">
+                                <img src="./img/ukraine.svg" alt="ukraine">
+                                <p class="loved_modal-form-phone-input-box-left-code">+380</p>
+                            </div>
+                            <div class="loved_modal-form-phone-input-box-divide"><img src="./img/Rectangle 240.png"
+                                    alt=""></div>
+                            <input class="loved_modal-form-phone-input-box-tel" type="tel" id="tel2"
+                                placeholder="Phone number">
+                        </div>
+                        <textarea class="loved_modal-form-comment-textarea" id="comment2" placeholder="Enter text"></textarea>
+                        <div class="loved_modal-button" data-review-send>
+                            <button class="loved_modal-button-send">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            
+            <div class="popup2 overlay_presence hidden" popup2-send>
+                <button class="popup2-close" popup2-close><img src="./img/popup-x.svg" alt="x"></button>
+                <div class="popup2-box">
+                    <h2 class="popup2-box-title">thank you</h2>
+                    <h2 class="popup2-box-title">for your feedback!</h2>
+                    <p class="popup2-box-text">We are so happy to hear from you!
+                    </p>
+                </div>
+            </div>
+
 
         </section>
 
@@ -545,7 +590,13 @@
                     Chocolate is a true indulgence that
                     will leave you craving more. Made with only the finest ingredients and handcrafted with the utmost
                     care, each piece is a work of art that is sure to please.</p>
-                <button class="explore_container--button">Subscribe</button>
+                <button class="explore_container--button" explore-sub >Subscribe</button>
+            </div>
+
+            <div class="popup3 overlay_presence hidden" popup3-send>
+                <button class="popup3-close" popup3-close><img src="./img/popup-x.svg" alt="x"></button>
+                <input class="popup3-input" id="subscribe-email" type="text" placeholder="Enter your email">
+                <button class="popup3-submit" popup3-submit>Submit</button>
             </div>
         </section>
 

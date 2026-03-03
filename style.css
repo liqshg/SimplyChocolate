@@ -644,9 +644,10 @@
 
 .slider-container2 {
   width: 100%;
-  max-width: 231px;
+  max-width: 233px;
   display: none;
   overflow: clip;
+  margin: 0 auto;
 }
 
 .slider-container3 {
@@ -753,7 +754,7 @@
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-top: 32px;
+  margin-top: 14px;
 }
 
 .dot2 {
@@ -854,6 +855,7 @@
   border-radius: 100px;
   padding: 14px 40px;
   border: none;
+  cursor: pointer;
 }
 
 .backdrop {
@@ -905,6 +907,7 @@
   letter-spacing: -3%;
   text-align: center;
   text-transform: uppercase;
+  padding-bottom: 32px;
 }
 .backdrop .modal_window-title span {
   color: #FD9222;
@@ -914,7 +917,6 @@
   max-width: 513px;
   display: flex;
   gap: 16px;
-  padding-top: 32px;
 }
 .backdrop .modal_window-cards-card {
   width: 100%;
@@ -947,7 +949,7 @@
   background-color: #FFFFFF;
   border: 1px solid rgba(17, 17, 17, 0.1019607843);
   border-radius: 15px;
-  padding: 24px 20px 18px 20px;
+  padding: 32px 32px 28px 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1108,9 +1110,6 @@
   color: #000000;
 }
 .backdrop .modal_window-form-phone-input-box-divide {
-  width: 2.5px;
-  height: 22px;
-  background-color: rgba(0, 0, 0, 0.1019607843);
   margin-left: 32px;
   margin-right: 28px;
 }
@@ -1462,6 +1461,301 @@
   padding: 14px 40px;
 }
 
+.backdrop2 {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.backdrop2.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  /*display: none;*/
+}
+.backdrop2 ::-webkit-scrollbar {
+  display: none;
+}
+.backdrop2 .loved_modal {
+  background: #FAFAFA;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 517px;
+  padding: 40px;
+  position: relative;
+}
+.backdrop2 .loved_modal-close-button {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.backdrop2 .loved_modal-title {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -3%;
+  text-transform: uppercase;
+  color: #111111;
+  padding-bottom: 40px;
+  width: 298px;
+}
+.backdrop2 .loved_modal-title span {
+  color: #FD9222;
+}
+.backdrop2 .loved_modal-form {
+  width: 100%;
+  max-width: 437px;
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+.backdrop2 .loved_modal-form-name-input {
+  width: 100%;
+  max-width: 437px;
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: -2%;
+  vertical-align: middle;
+  color: #1E1823;
+  border: 1.5px solid rgba(17, 17, 17, 0.0509803922);
+  box-shadow: 0px 5.44px 5.44px 0px rgba(0, 0, 0, 0.0117647059);
+  border-radius: 13px;
+  padding: 22px 24px;
+  background-color: #FAFAFA;
+}
+.backdrop2 .loved_modal-form-name-input::-moz-placeholder {
+  color: rgba(64, 64, 64, 0.3019607843);
+}
+.backdrop2 .loved_modal-form-name-input::placeholder {
+  color: rgba(64, 64, 64, 0.3019607843);
+}
+.backdrop2 .loved_modal-form-name-input:focus {
+  outline: none;
+  border: none;
+  border: 1.5px solid #FD9222;
+}
+.backdrop2 .loved_modal-form-email-input {
+  width: 100%;
+  max-width: 437px;
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: -2%;
+  vertical-align: middle;
+  color: #1E1823;
+  border: 1.5px solid rgba(17, 17, 17, 0.0509803922);
+  box-shadow: 0px 5.44px 5.44px 0px rgba(0, 0, 0, 0.0117647059);
+  border-radius: 13px;
+  padding: 22px 24px;
+  background-color: #FAFAFA;
+}
+.backdrop2 .loved_modal-form-email-input::-moz-placeholder {
+  color: rgba(64, 64, 64, 0.3019607843);
+}
+.backdrop2 .loved_modal-form-email-input::placeholder {
+  color: rgba(64, 64, 64, 0.3019607843);
+}
+.backdrop2 .loved_modal-form-email-input:focus {
+  outline: none;
+  border: none;
+  border: 1.5px solid #FD9222;
+}
+.backdrop2 .loved_modal-form-phone-input-box {
+  width: 100%;
+  max-width: 513px;
+  border: 1.5px solid rgba(17, 17, 17, 0.0509803922);
+  box-shadow: 0px 5.44px 5.44px 0px rgba(0, 0, 0, 0.0117647059);
+  border-radius: 13px;
+  padding: 17px 24px;
+  display: flex;
+  background-color: #FAFAFA;
+  align-items: center;
+}
+.backdrop2 .loved_modal-form-phone-input-box-left {
+  width: 100%;
+  max-width: 93px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.backdrop2 .loved_modal-form-phone-input-box-left-code {
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: -2%;
+  vertical-align: middle;
+  color: #000000;
+}
+.backdrop2 .loved_modal-form-phone-input-box-divide {
+  margin-left: 32px;
+  margin-right: 28px;
+}
+.backdrop2 .loved_modal-form-phone-input-box-tel {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: -2%;
+  vertical-align: middle;
+  color: #1E1823;
+  background-color: transparent;
+  border: none;
+}
+.backdrop2 .loved_modal-form-phone-input-box-tel::-moz-placeholder {
+  color: rgba(64, 64, 64, 0.3019607843);
+}
+.backdrop2 .loved_modal-form-phone-input-box-tel::placeholder {
+  color: rgba(64, 64, 64, 0.3019607843);
+}
+.backdrop2 .loved_modal-form-phone-input-box-tel:focus {
+  outline: none;
+  border: none;
+}
+.backdrop2 .loved_modal-form-comment-textarea {
+  width: 437px;
+  height: 137px;
+  resize: none;
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: -2%;
+  vertical-align: middle;
+  color: #1E1823;
+  border: 1.5px solid rgba(17, 17, 17, 0.0509803922);
+  box-shadow: 0px 5.44px 5.44px 0px rgba(0, 0, 0, 0.0117647059);
+  border-radius: 13px;
+  padding: 22px 24px;
+  background-color: #FAFAFA;
+}
+.backdrop2 .loved_modal-form-comment-textarea::-moz-placeholder {
+  color: rgba(64, 64, 64, 0.3019607843);
+}
+.backdrop2 .loved_modal-form-comment-textarea::placeholder {
+  color: rgba(64, 64, 64, 0.3019607843);
+}
+.backdrop2 .loved_modal-form-comment-textarea:focus {
+  outline: none;
+  border: none;
+  border: 1.5px solid #FD9222;
+}
+.backdrop2 .loved_modal-button-send {
+  width: 100%;
+  max-width: 133px;
+  margin-top: 18px;
+  background-color: #FD9222;
+  border: none;
+  border-radius: 100px;
+  padding: 14px 40px;
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+.backdrop2 .loved_modal ::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+.backdrop2 .loved_modal ::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+.popup2 {
+  z-index: 51;
+  background-color: #FD9222;
+  background-image: url("./img/pop up.png");
+  width: 516px;
+  height: 414px;
+  border-radius: 15px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+}
+.popup2.hidden {
+  display: none;
+}
+.popup2-close {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  cursor: pointer;
+  z-index: 100;
+}
+.popup2-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 155px 49px 163px 170px;
+}
+.popup2-box-title {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -2%;
+  text-transform: uppercase;
+  color: #FCF1E0;
+}
+.popup2-box-text {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -2%;
+  color: #FFFFFF;
+}
+
+.popup3 {
+  z-index: 51;
+  background-color: #FD9222;
+  background-image: url("./img/pop up.png");
+  width: 516px;
+  height: 414px;
+  border-radius: 15px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+}
+.popup3.hidden {
+  display: none;
+}
+.popup3-close {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  cursor: pointer;
+  z-index: 100;
+}
+
 @media (max-width: 1160px) {
   main .chocolate {
     max-width: 704px;
@@ -1747,6 +2041,113 @@
   }
   main .made_container--right--box--card {
     max-width: 307px;
+  }
+  main .slider-container2 {
+    display: block;
+  }
+  main .modal_window-cards {
+    display: none !important;
+  }
+  main .modal_window {
+    max-width: 311px !important;
+    padding: 32px 24px 24px 24px !important;
+  }
+  main .modal_window-close-button {
+    top: 14px !important;
+    right: 14px !important;
+  }
+  main .modal_window-form {
+    max-width: 263px !important;
+  }
+  main .modal_window-form-info-box {
+    display: flex;
+    flex-direction: column;
+    gap: 14px !important;
+  }
+  main .modal_window-form-info-box-input {
+    width: 100%;
+    max-width: 263px !important;
+    border-radius: 8px !important;
+    padding: 14px 18px !important;
+    font-size: 14px !important;
+  }
+  main .modal_window-form-email-input {
+    width: 100%;
+    max-width: 263px !important;
+    border-radius: 8px !important;
+    padding: 14px 18px !important;
+    font-size: 14px !important;
+  }
+  main .modal_window-form-phone-input-box {
+    width: 100%;
+    max-width: 263px !important;
+    border-radius: 8px !important;
+    padding: 8px 18px !important;
+    font-size: 14px !important;
+  }
+  main .modal_window-form-phone-input-box-left {
+    gap: 8px;
+  }
+  main .modal_window-form-phone-input-box-left-code {
+    font-size: 14px !important;
+  }
+  main .modal_window-form-phone-input-box-divide {
+    margin-left: 8px !important;
+    margin-right: 14px !important;
+    opacity: 60%;
+  }
+  main .modal_window-form-phone-input-box-tel {
+    font-size: 14px !important;
+  }
+  main .modal_window-form-card-box {
+    width: 100%;
+    max-width: 263px !important;
+    border-radius: 8px !important;
+    padding: 12px 12px 12px 18px !important;
+    font-size: 14px !important;
+  }
+  main .modal_window-form-card-box-input {
+    font-size: 14px !important;
+  }
+  main .modal_window-form-card-box img {
+    width: 32px;
+    height: 21px;
+  }
+  main .modal_window-form-comment-textarea {
+    height: 91px !important;
+    resize: none;
+    padding: 22px 24px;
+    width: 263px !important;
+    border-radius: 8px !important;
+    padding: 12px 12px 12px 18px !important;
+    font-size: 14px !important;
+  }
+  main .modal_window-button-send {
+    width: 100%;
+    max-width: 109px !important;
+    padding: 12px 28px !important;
+  }
+  main .popup {
+    width: 311px;
+    height: 350px;
+    background-image: url("./img/Pop up (1).png");
+  }
+  main .popup-close {
+    top: 14px;
+    right: 14px;
+  }
+  main .popup-box {
+    gap: 8px;
+    padding: 84px 24px 170px 75px;
+  }
+  main .popup-box-title {
+    font-size: 20px;
+  }
+  main .popup-box-text {
+    font-size: 14px;
+  }
+  main .popup-box-text span {
+    font-size: 14px;
   }
 }
 @media (max-width: 530px) {

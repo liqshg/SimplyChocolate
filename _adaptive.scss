@@ -1,8 +1,6 @@
 @media (max-width:1300px) {
-    body{
-        .footer_container{
-
-        }
+    body {
+        .footer_container {}
     }
 }
 
@@ -134,11 +132,11 @@
             }
         }
 
-        .slider-container3{
+        .slider-container3 {
             width: 721px;
         }
 
-        .loved_container_card{
+        .loved_container_card {
             width: 344px;
         }
 
@@ -220,20 +218,20 @@
                     letter-spacing: -2%;
                 }
 
-                &--box{
+                &--box {
                     width: 100%;
                     max-width: 335px;
                 }
             }
 
-            &_line{
+            &_line {
                 margin-top: 32px;
                 margin-bottom: 32px;
                 margin-right: 0;
                 margin-left: 0;
             }
 
-            &_bottom{
+            &_bottom {
                 display: flex;
                 flex-direction: column;
                 gap: 18px;
@@ -272,11 +270,11 @@
             }
         }
 
-        .slider-container3{
+        .slider-container3 {
             width: 337px;
         }
 
-        .loved_container_card{
+        .loved_container_card {
             width: 335px;
         }
 
@@ -425,6 +423,146 @@
                 }
             }
         }
+
+
+
+        .slider-container2 {
+            display: block;
+        }
+
+        .modal_window-cards {
+            display: none !important;
+
+
+        }
+
+        .modal_window-cards-card-img {}
+
+        .modal_window {
+            max-width: 311px !important;
+            padding: 32px 24px 24px 24px !important;
+
+            &-close-button {
+                top: 14px !important;
+                right: 14px !important;
+            }
+
+            &-form {
+                max-width: 263px !important;
+
+                &-info-box {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 14px !important;
+
+                    &-input {
+                        width: 100%;
+                        max-width: 263px !important;
+                        border-radius: 8px !important;
+                        padding: 14px 18px !important;
+                        font-size: 14px !important;
+                    }
+                }
+
+                &-email-input {
+                    width: 100%;
+                    max-width: 263px !important;
+                    border-radius: 8px !important;
+                    padding: 14px 18px !important;
+                    font-size: 14px !important;
+                }
+
+                &-phone-input-box {
+                    width: 100%;
+                    max-width: 263px !important;
+                    border-radius: 8px !important;
+                    padding: 8px 18px !important;
+                    font-size: 14px !important;
+
+                    &-left {
+                        gap: 8px;
+                    }
+
+                    &-left-code {
+                        font-size: 14px !important;
+                    }
+
+                    &-divide {
+                        margin-left: 8px !important;
+                        margin-right: 14px !important;
+                        opacity: 60%;
+                    }
+
+                    &-tel {
+                        font-size: 14px !important;
+                    }
+                }
+
+                &-card-box {
+                    width: 100%;
+                    max-width: 263px !important;
+                    border-radius: 8px !important;
+                    padding: 12px 12px 12px 18px !important;
+                    font-size: 14px !important;
+
+                    &-input {
+                        font-size: 14px !important;
+                    }
+
+                    & img {
+                        width: 32px;
+                        height: 21px;
+                    }
+                }
+
+                &-comment-textarea {
+                    height: 91px !important;
+                    resize: none;
+                    padding: 22px 24px;
+                    width: 263px !important;
+                    border-radius: 8px !important;
+                    padding: 12px 12px 12px 18px !important;
+                    font-size: 14px !important;
+                }
+
+
+            }
+
+            &-button-send {
+                width: 100%;
+                max-width: 109px !important;
+                padding: 12px 28px !important;
+            }
+        }
+
+        .popup {
+            width: 311px;
+            height: 350px;
+            background-image: url("./img/Pop\ up\ \(1\).png");
+
+            &-close {
+                top: 14px;
+                right: 14px;
+            }
+
+            &-box {
+                gap: 8px;
+                padding: 84px 24px 170px 75px;
+
+                &-title {
+                    font-size: 20px;
+                }
+
+                &-text {
+                    font-size: 14px;
+
+                    & span {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
     }
 }
 
@@ -478,9 +616,10 @@
     }
 
     main {
-        .taste{
+        .taste {
             padding: 72px 0;
         }
+
         .taste--title {
             width: 283px;
             font-family: Montserrat;
