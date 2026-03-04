@@ -1406,6 +1406,7 @@ $orange: #FD9222;
         border: 1px solid #FD9222;
         border-radius: 100px;
         padding: 14px 40px;
+        cursor: pointer;
     }
 }
 
@@ -1721,9 +1722,9 @@ $orange: #FD9222;
 .popup3 {
     z-index: 51;
     background-color: #FD9222;
-    background-image: url("./img/pop\ up.png");
-    width: 516px;
-    height: 414px;
+    background-image: url("./img/pop\ up\ \(2\).png");
+    width: 538px;
+    height: 412px;
     border-radius: 15px;
     position: fixed;
     top: 50%;
@@ -1745,6 +1746,74 @@ $orange: #FD9222;
         z-index: 100;
     }
 
-    
-}
+    &-container {
+        width: 100%;
+        max-width: 458px;
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+        padding: 236px 40px 40px 40px;
+    }
 
+    &-title {
+        font-family: Montserrat;
+        font-weight: 600;
+        font-style: SemiBold;
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: -3%;
+        text-transform: uppercase;
+        color: #111111;
+
+        & span {
+            color: #FD9222;
+        }
+    }
+
+    &-box {
+        width: 100%;
+        max-width: 458px;
+        display: flex;
+        gap: 8px;
+    }
+
+    &-input {
+        width: 313px;
+        font-family: Montserrat;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 100%;
+        letter-spacing: -2%;
+        vertical-align: middle;
+        color: #111111;
+        padding: 15px 24px;
+        border: 1.5px solid #1111110D;
+        border-radius: 30px;
+        background-color: transparent;
+
+        &::placeholder {
+            color: #4040404D;
+        }
+
+        &:focus {
+            outline: none;
+            border: none;
+            border: 1.5px solid #FD9222;
+        }
+    }
+
+    &-submit {
+        width: 137px;
+        border-radius: 100px;
+        background-color: #FD9222;
+        font-family: Montserrat;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: #FFFFFF;
+        padding: 16px 42px;
+        border: none;
+        cursor: pointer;
+    }
+}
