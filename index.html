@@ -14,11 +14,11 @@
         <div class="header_top">
             <img src="./img/logoChocolate.svg" alt="logo">
             <nav class="header_top_info">
-                <a class="header_top_info--link" href="#">Home</a>
-                <a class="header_top_info--link" href="#">How it’s made?</a>
-                <a class="header_top_info--link" href="#">Our products</a>
-                <a class="header_top_info--link" href="#">Top sellers</a>
-                <a class="header_top_info--link" href="#">Chocolate is loved</a>
+                <a class="header_top_info--link" href="#about">Home</a>
+                <a class="header_top_info--link" href="#made">How it’s made?</a>
+                <a class="header_top_info--link" href="#products">Our products</a>
+                <a class="header_top_info--link" href="#sellers">Top sellers</a>
+                <a class="header_top_info--link" href="#loved">Chocolate is loved</a>
             </nav>
             <div class="header_top--social">
                 <svg class="header_top--social--svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -52,11 +52,11 @@
                 <button class="close" id="closeMenu"><img src="./img/x.png" alt=""></button>
 
                 <nav class="menu-nav">
-                    <a href="#">Home</a>
-                    <a href="#">How it’s made?</a>
-                    <a href="#">Our products</a>
-                    <a href="#">Top sellers</a>
-                    <a href="#">Chocolate is loved</a>
+                    <a href="#about">Home</a>
+                    <a href="#made">How it’s made?</a>
+                    <a href="#products">Our products</a>
+                    <a href="#sellers">Top sellers</a>
+                    <a href="#loved">Chocolate is loved</a>
                 </nav>
 
 
@@ -75,26 +75,32 @@
                     our finest ingredients for a moment
                     of pure delight!</h2>
                 <div class="header_home_container--box">
-                    <button class="header_home_container--box--but1">Buy now</button>
-                    <button class="header_home_container--box--but2">How it’s made</button>
+                    <a href="#products">
+                        <button class="header_home_container--box--but1">Buy now</button>
+                    </a>
+                    <a href="#made">
+                        <button class="header_home_container--box--but2">How it’s made</button>
+                    </a>
                 </div>
             </div>
-            <div class="header_home_absolute">
-                <p class="header_home_absolute--text">scroll down</p>
-                <button class="header_home_absolute--button"><svg xmlns="http://www.w3.org/2000/svg" width="38"
-                        height="38" viewBox="0 0 38 38" fill="none">
-                        <ellipse cx="19" cy="19" rx="19" ry="19" transform="matrix(0 1 1 0 0 0)" fill="white" />
-                        <path
-                            d="M19.6508 20.2834C19.5655 20.3693 19.4642 20.4375 19.3525 20.484C19.2407 20.5306 19.1209 20.5545 18.9999 20.5545C18.8789 20.5545 18.7591 20.5306 18.6474 20.484C18.5357 20.4375 18.4343 20.3693 18.3491 20.2834L14.1507 16.0759C14.0655 15.99 13.9641 15.9218 13.8524 15.8752C13.7407 15.8287 13.6209 15.8047 13.4999 15.8047C13.3789 15.8047 13.2591 15.8287 13.1474 15.8752C13.0357 15.9218 12.9343 15.99 12.8491 16.0759C12.6783 16.2476 12.5825 16.48 12.5825 16.7221C12.5825 16.9643 12.6783 17.1966 12.8491 17.3684L17.0566 21.5759C17.5722 22.0909 18.2712 22.3801 18.9999 22.3801C19.7287 22.3801 20.4276 22.0909 20.9433 21.5759L25.1508 17.3684C25.3201 17.1976 25.4156 16.9672 25.4166 16.7267C25.4173 16.6061 25.3942 16.4865 25.3486 16.3748C25.3029 16.2631 25.2357 16.1615 25.1508 16.0759C25.0655 15.99 24.9642 15.9218 24.8525 15.8752C24.7408 15.8287 24.6209 15.8047 24.4999 15.8047C24.3789 15.8047 24.2591 15.8287 24.1474 15.8752C24.0357 15.9218 23.9343 15.99 23.8491 16.0759L19.6508 20.2834Z"
-                            fill="#FD9222" />
-                    </svg>
-                </button>
-            </div>
+            <a href="#products">
+                <div class="header_home_absolute">
+                    <p class="header_home_absolute--text">scroll down</p>
+                    <button class="header_home_absolute--button"><svg xmlns="http://www.w3.org/2000/svg" width="38"
+                            height="38" viewBox="0 0 38 38" fill="none">
+                            <ellipse cx="19" cy="19" rx="19" ry="19" transform="matrix(0 1 1 0 0 0)" fill="white" />
+                            <path
+                                d="M19.6508 20.2834C19.5655 20.3693 19.4642 20.4375 19.3525 20.484C19.2407 20.5306 19.1209 20.5545 18.9999 20.5545C18.8789 20.5545 18.7591 20.5306 18.6474 20.484C18.5357 20.4375 18.4343 20.3693 18.3491 20.2834L14.1507 16.0759C14.0655 15.99 13.9641 15.9218 13.8524 15.8752C13.7407 15.8287 13.6209 15.8047 13.4999 15.8047C13.3789 15.8047 13.2591 15.8287 13.1474 15.8752C13.0357 15.9218 12.9343 15.99 12.8491 16.0759C12.6783 16.2476 12.5825 16.48 12.5825 16.7221C12.5825 16.9643 12.6783 17.1966 12.8491 17.3684L17.0566 21.5759C17.5722 22.0909 18.2712 22.3801 18.9999 22.3801C19.7287 22.3801 20.4276 22.0909 20.9433 21.5759L25.1508 17.3684C25.3201 17.1976 25.4156 16.9672 25.4166 16.7267C25.4173 16.6061 25.3942 16.4865 25.3486 16.3748C25.3029 16.2631 25.2357 16.1615 25.1508 16.0759C25.0655 15.99 24.9642 15.9218 24.8525 15.8752C24.7408 15.8287 24.6209 15.8047 24.4999 15.8047C24.3789 15.8047 24.2591 15.8287 24.1474 15.8752C24.0357 15.9218 23.9343 15.99 23.8491 16.0759L19.6508 20.2834Z"
+                                fill="#FD9222" />
+                        </svg>
+                    </button>
+                </div>
+            </a>
         </div>
     </header>
 
     <main>
-        <section class="about">
+        <section class="about" id="about">
             <div class="about_container">
                 <div class="about_container_card choco">
                     <div class="about_container_card--box">
@@ -220,7 +226,7 @@
                     </div>
                 </div>
         </section>
-        <section class="made">
+        <section class="made" id="made">
             <h2 class="made--title">HOW IT’S <span>made?</span></h2>
             <div class="made_container">
                 <div class="made_container--left">
@@ -269,7 +275,7 @@
         <section class="line"></section>
 
 
-        <section class="products">
+        <section class="products" id="products">
             <h2 class="products--title">Our <span>Products</span></h2>
 
             <div class="slider-container" id="slider-product">
@@ -350,7 +356,7 @@
 
 
 
-        <section class="sellers">
+        <section class="sellers" id="sellers">
             <h2 class="sellers--title"> <span>tOp</span> Sellers</h2>
             <div class="sellers_container">
                 <img class="sellers_container_card1" src="./img/sellers1.png" alt="chocolate">
@@ -485,7 +491,7 @@
 
         </section>
 
-        <section class="loved">
+        <section class="loved" id="loved">
             <h2 class="loved--title"><span>chocolate</span> is loved</h2>
 
             <div class="slider-container3" id="slider-product3">
@@ -547,7 +553,10 @@
                                 stroke-linejoin="round" />
                         </svg>
                     </button>
-                    <h2 class="loved_modal-title">LEAVE A REVIEW ABOUT <span>OUR CHOCOLATE</span> </h2>
+                    <h2 class="loved_modal-title">LEAVE A REVIEW ABOUT <span class="colorSpan">OUR CHOCOLATE</span>
+                    </h2>
+                    <h2 class="loved_modal-title2">LEAVE A REVIEW <span class="Span"></span> ABOUT <span
+                            class="colorSpan">OUR CHOCOLATE</span> </h2>
                     <form class="loved_modal-form" id="review-form">
                         <input class="loved_modal-form-name-input" id="name2" type="name" placeholder="Name">
                         <input class="loved_modal-form-email-input" id="email2" type="email" placeholder="Email">
@@ -564,7 +573,7 @@
                         <textarea class="loved_modal-form-comment-textarea" id="comment2"
                             placeholder="Enter text"></textarea>
                         <div class="loved_modal-button" data-review-send>
-                            <button class="loved_modal-button-send" >Submit</button>
+                            <button class="loved_modal-button-send">Send</button>
                         </div>
                     </form>
                 </div>
@@ -601,7 +610,8 @@
                         <span>new chocolate</span> first!
                     </h2>
                     <div class="popup3-box">
-                        <input class="popup3-input" id="subscribe-email" type="text" placeholder="Enter your email" required>
+                        <input class="popup3-input" id="subscribe-email" type="text" placeholder="Enter your email"
+                            required>
                         <button class="popup3-submit" popup3-submit>Submit</button>
                     </div>
                 </div>

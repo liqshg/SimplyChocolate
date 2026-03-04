@@ -38,6 +38,13 @@
             }
         }
 
+        .chocolate-img {
+            margin-bottom: 36px !important;
+            align-items: center !important;
+            margin-left: 36px  !important;
+            margin-right: 36px !important;
+        }
+
         .made_container {
             display: flex;
             flex-direction: column;
@@ -547,7 +554,7 @@
 
             &-box {
                 gap: 8px;
-                padding: 84px 24px 170px 75px;
+                padding: 74px 24px 170px 75px;
 
                 &-title {
                     font-size: 20px;
@@ -566,7 +573,68 @@
     }
 }
 
-@media (max-width:530px) {
+@media (max-width:570px) {
+    .popup3 {
+        width: 311px;
+        height: 350px;
+        background-image: url("./img/Pop\ up\ \(3\).png");
+
+        &-close {
+            top: 14px;
+            right: 14px;
+        }
+
+        &-container {
+            max-width: 263px;
+            gap: 24px;
+            margin: 198px 24px 32px 24px;
+            padding: 0;
+        }
+
+        &-title {
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        &-box {
+            width: 100%;
+            max-width: 263px;
+            display: flex;
+            position: relative;
+        }
+
+        &-input {
+            width: 263px;
+            font-family: Montserrat;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 100%;
+            letter-spacing: -2%;
+            vertical-align: middle;
+            padding: 14px 18px;
+            border-radius: 25px;
+            background-color: transparent;
+        }
+
+        &-submit {
+            width: 100px;
+            border-radius: 100px;
+            background-color: #FD9222;
+            font-family: Montserrat;
+            font-weight: 600;
+            font-size: 14px;
+            color: #FFFFFF;
+            padding: 16px 18px;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+}
+
+@media (max-width:540px) {
     body {
         .header_home_container {
             &--title {
@@ -634,6 +702,134 @@
 
         .taste--text {
             width: 335px;
+        }
+
+        .loved_modal {
+            max-width: 311px !important;
+            padding: 32px 24px !important;
+
+            &-close-button {
+                top: 14px !important;
+                right: 14px !important;
+            }
+
+            &-title {
+                display: none;
+            }
+
+            &-title2 {
+                display: block !important;
+                padding-bottom: 32px !important;
+            }
+
+            max-width: 311px !important;
+            padding: 32px 24px 24px 24px !important;
+
+            &-close-button {
+                top: 14px !important;
+                right: 14px !important;
+            }
+
+            &-form {
+                max-width: 263px !important;
+
+                &-name-input {
+                    width: 100%;
+                    max-width: 263px !important;
+                    border-radius: 8px !important;
+                    padding: 14px 18px !important;
+                    font-size: 14px !important;
+                }
+
+                &-email-input {
+                    width: 100%;
+                    max-width: 263px !important;
+                    border-radius: 8px !important;
+                    padding: 14px 18px !important;
+                    font-size: 14px !important;
+                }
+
+                &-phone-input-box {
+                    width: 100%;
+                    max-width: 263px !important;
+                    border-radius: 8px !important;
+                    padding: 8px 18px !important;
+                    font-size: 14px !important;
+
+                    &-left {
+                        gap: 8px;
+                    }
+
+                    &-left-code {
+                        font-size: 14px !important;
+                    }
+
+                    &-divide {
+                        margin-left: 8px !important;
+                        margin-right: 14px !important;
+                        opacity: 60%;
+                    }
+
+                    &-tel {
+                        font-size: 14px !important;
+                    }
+                }
+
+
+                &-comment-textarea {
+                    height: 91px !important;
+                    resize: none;
+                    padding: 22px 24px;
+                    width: 263px !important;
+                    border-radius: 8px !important;
+                    padding: 12px 12px 12px 18px !important;
+                    font-size: 14px !important;
+                }
+
+
+            }
+
+            &-button-send {
+                width: 100%;
+                max-width: 109px !important;
+                padding: 12px 28px !important;
+            }
+        }
+
+        .popup2 {
+            width: 311px;
+            height: 350px;
+            background-image: url("./img/Pop\ up\ \(1\).png");
+
+            &-close {
+                top: 14px;
+                right: 14px;
+            }
+
+            &-box {
+                padding: 0;
+                margin: 84px 24px 178px 58px;
+                width: 229px;
+
+                &-title {
+                    font-family: Montserrat;
+                    font-weight: 600;
+                    font-style: SemiBold;
+                    font-size: 20px;
+                    line-height: 24px;
+                    letter-spacing: -2%;
+                    text-transform: uppercase;
+                }
+
+                &-text {
+                    font-family: Montserrat;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 16px;
+                    letter-spacing: -2%;
+                    width: 198px;
+                }
+            }
         }
     }
 }

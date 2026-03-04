@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 .header {
@@ -108,6 +109,7 @@
   border: none;
   border-radius: 100px;
   padding: 14px 40px;
+  cursor: pointer;
 }
 .header_home_container--box--but1:hover {
   background-color: #FCF1E0;
@@ -125,6 +127,7 @@
   border: 1px solid #FFFFFF;
   border-radius: 100px;
   padding: 14px 40px;
+  cursor: pointer;
 }
 .header_home_container--box--but2:hover {
   border: 1px solid #FD9222;
@@ -140,6 +143,7 @@
   position: absolute;
   right: 40px;
   bottom: 40px;
+  cursor: pointer;
 }
 .header_home_absolute:hover .header_home_absolute--text {
   color: #FD9222;
@@ -344,6 +348,7 @@
 }
 .chocolate-card .card-front .chocolate-img {
   margin-bottom: 36px;
+  align-items: center;
 }
 .chocolate-card .card-front .title {
   font-family: Montserrat;
@@ -1512,8 +1517,27 @@
   padding-bottom: 40px;
   width: 298px;
 }
-.backdrop2 .loved_modal-title span {
+.backdrop2 .loved_modal-title .colorSpan {
   color: #FD9222;
+}
+.backdrop2 .loved_modal-title2 {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -3%;
+  text-transform: uppercase;
+  color: #111111;
+  padding-bottom: 40px;
+  width: 255px;
+  display: none;
+}
+.backdrop2 .loved_modal-title2 .colorSpan {
+  color: #FD9222;
+}
+.backdrop2 .loved_modal-title2 .Span {
+  padding-left: 15px;
 }
 .backdrop2 .loved_modal-form {
   width: 100%;
@@ -1659,7 +1683,6 @@
 .backdrop2 .loved_modal-button-send {
   width: 100%;
   max-width: 133px;
-  margin-top: 18px;
   background-color: #FD9222;
   border: none;
   border-radius: 100px;
@@ -1709,7 +1732,6 @@
 .popup2-box {
   display: flex;
   flex-direction: column;
-  gap: 8px;
   padding: 155px 49px 163px 170px;
 }
 .popup2-box-title {
@@ -1729,6 +1751,7 @@
   line-height: 24px;
   letter-spacing: -2%;
   color: #FFFFFF;
+  padding-top: 8px;
 }
 
 .popup3 {
@@ -1849,6 +1872,12 @@
   }
   main .chocolate .chocolate-img {
     margin: 0 28px 25px 28px;
+  }
+  main .chocolate-img {
+    margin-bottom: 36px !important;
+    align-items: center !important;
+    margin-left: 36px !important;
+    margin-right: 36px !important;
   }
   main .made_container {
     display: flex;
@@ -2205,7 +2234,7 @@
   }
   main .popup-box {
     gap: 8px;
-    padding: 84px 24px 170px 75px;
+    padding: 74px 24px 170px 75px;
   }
   main .popup-box-title {
     font-size: 20px;
@@ -2217,7 +2246,61 @@
     font-size: 14px;
   }
 }
-@media (max-width: 530px) {
+@media (max-width: 570px) {
+  .popup3 {
+    width: 311px;
+    height: 350px;
+    background-image: url("./img/Pop up (3).png");
+  }
+  .popup3-close {
+    top: 14px;
+    right: 14px;
+  }
+  .popup3-container {
+    max-width: 263px;
+    gap: 24px;
+    margin: 198px 24px 32px 24px;
+    padding: 0;
+  }
+  .popup3-title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .popup3-box {
+    width: 100%;
+    max-width: 263px;
+    display: flex;
+    position: relative;
+  }
+  .popup3-input {
+    width: 263px;
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: -2%;
+    vertical-align: middle;
+    padding: 14px 18px;
+    border-radius: 25px;
+    background-color: transparent;
+  }
+  .popup3-submit {
+    width: 100px;
+    border-radius: 100px;
+    background-color: #FD9222;
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 14px;
+    color: #FFFFFF;
+    padding: 16px 18px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+@media (max-width: 540px) {
   body .header_home_container--title {
     font-family: Montserrat;
     font-weight: 500;
@@ -2272,6 +2355,112 @@
   }
   main .taste--text {
     width: 335px;
+  }
+  main .loved_modal {
+    max-width: 311px !important;
+    padding: 32px 24px !important;
+  }
+  main .loved_modal-close-button {
+    top: 14px !important;
+    right: 14px !important;
+  }
+  main .loved_modal-title {
+    display: none;
+  }
+  main .loved_modal-title2 {
+    display: block !important;
+    padding-bottom: 32px !important;
+  }
+  main .loved_modal {
+    max-width: 311px !important;
+    padding: 32px 24px 24px 24px !important;
+  }
+  main .loved_modal-close-button {
+    top: 14px !important;
+    right: 14px !important;
+  }
+  main .loved_modal-form {
+    max-width: 263px !important;
+  }
+  main .loved_modal-form-name-input {
+    width: 100%;
+    max-width: 263px !important;
+    border-radius: 8px !important;
+    padding: 14px 18px !important;
+    font-size: 14px !important;
+  }
+  main .loved_modal-form-email-input {
+    width: 100%;
+    max-width: 263px !important;
+    border-radius: 8px !important;
+    padding: 14px 18px !important;
+    font-size: 14px !important;
+  }
+  main .loved_modal-form-phone-input-box {
+    width: 100%;
+    max-width: 263px !important;
+    border-radius: 8px !important;
+    padding: 8px 18px !important;
+    font-size: 14px !important;
+  }
+  main .loved_modal-form-phone-input-box-left {
+    gap: 8px;
+  }
+  main .loved_modal-form-phone-input-box-left-code {
+    font-size: 14px !important;
+  }
+  main .loved_modal-form-phone-input-box-divide {
+    margin-left: 8px !important;
+    margin-right: 14px !important;
+    opacity: 60%;
+  }
+  main .loved_modal-form-phone-input-box-tel {
+    font-size: 14px !important;
+  }
+  main .loved_modal-form-comment-textarea {
+    height: 91px !important;
+    resize: none;
+    padding: 22px 24px;
+    width: 263px !important;
+    border-radius: 8px !important;
+    padding: 12px 12px 12px 18px !important;
+    font-size: 14px !important;
+  }
+  main .loved_modal-button-send {
+    width: 100%;
+    max-width: 109px !important;
+    padding: 12px 28px !important;
+  }
+  main .popup2 {
+    width: 311px;
+    height: 350px;
+    background-image: url("./img/Pop up (1).png");
+  }
+  main .popup2-close {
+    top: 14px;
+    right: 14px;
+  }
+  main .popup2-box {
+    padding: 0;
+    margin: 84px 24px 178px 58px;
+    width: 229px;
+  }
+  main .popup2-box-title {
+    font-family: Montserrat;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -2%;
+    text-transform: uppercase;
+  }
+  main .popup2-box-text {
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: -2%;
+    width: 198px;
   }
 }
 @media (max-width: 490px) {
@@ -2416,6 +2605,10 @@
   letter-spacing: -2%;
   vertical-align: middle;
   color: #FFFFFF;
+}
+.footer_container_bottom--link:hover {
+  color: #FD9222;
+  transition: 0.3s ease;
 }
 
 body {

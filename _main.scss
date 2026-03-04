@@ -1,3 +1,5 @@
+
+
 .about {
     background-color: #1E1823;
     padding: 0 10px;
@@ -131,6 +133,7 @@ $orange: #FD9222;
 
         .chocolate-img {
             margin-bottom: 36px;
+            align-items: center;
         }
 
         .title {
@@ -1468,11 +1471,32 @@ $orange: #FD9222;
             padding-bottom: 40px;
             width: 298px;
 
-            & span {
+            & .colorSpan {
                 color: #FD9222;
             }
         }
 
+        &-title2 {
+            font-family: Montserrat;
+            font-weight: 600;
+            font-style: SemiBold;
+            font-size: 20px;
+            line-height: 24px;
+            letter-spacing: -3%;
+            text-transform: uppercase;
+            color: #111111;
+            padding-bottom: 40px;
+            width: 255px;
+            display: none;
+
+            & .colorSpan {
+                color: #FD9222;
+            }
+
+            & .Span {
+                padding-left: 15px;
+            }
+        }
 
         &-form {
             width: 100%;
@@ -1636,7 +1660,6 @@ $orange: #FD9222;
         &-button-send {
             width: 100%;
             max-width: 133px;
-            margin-top: 18px;
             background-color: #FD9222;
             border: none;
             border-radius: 100px;
@@ -1693,7 +1716,6 @@ $orange: #FD9222;
     &-box {
         display: flex;
         flex-direction: column;
-        gap: 8px;
         padding: 155px 49px 163px 170px;
 
         &-title {
@@ -1714,6 +1736,7 @@ $orange: #FD9222;
             line-height: 24px;
             letter-spacing: -2%;
             color: #FFFFFF;
+            padding-top: 8px;
         }
     }
 }
@@ -1769,6 +1792,8 @@ $orange: #FD9222;
             color: #FD9222;
         }
     }
+
+
 
     &-box {
         width: 100%;
