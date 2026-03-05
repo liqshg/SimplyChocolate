@@ -41,7 +41,7 @@
         .chocolate-img {
             margin-bottom: 36px !important;
             align-items: center !important;
-            margin-left: 36px  !important;
+            margin-left: 36px !important;
             margin-right: 36px !important;
         }
 
@@ -205,11 +205,13 @@
         }
 
         .footer_container {
-            max-width: 335px;
-            padding: 32px 0;
+            max-width: 100%;
+            padding: 32px;
+            max-width: none;
 
             &_top {
-                max-width: 335px;
+                width: 100%;
+                max-width: none;
                 display: flex;
                 flex-direction: column;
                 gap: 32px;
@@ -227,7 +229,7 @@
 
                 &--box {
                     width: 100%;
-                    max-width: 335px;
+                    max-width: none;
                 }
             }
 

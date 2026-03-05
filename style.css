@@ -1353,7 +1353,7 @@
   text-align: center;
   text-transform: uppercase;
   color: #FFFFFF;
-  width: 378px;
+  width: 242px;
 }
 .explore_container--text {
   font-family: Montserrat;
@@ -1785,7 +1785,7 @@
   display: flex;
   flex-direction: column;
   gap: 28px;
-  padding: 236px 40px 40px 40px;
+  margin: 236px 40px 40px 40px;
 }
 .popup3-title {
   font-family: Montserrat;
@@ -1979,11 +1979,13 @@
     display: none;
   }
   body .footer_container {
-    max-width: 335px;
-    padding: 32px 0;
+    max-width: 100%;
+    padding: 32px;
+    max-width: none;
   }
   body .footer_container_top {
-    max-width: 335px;
+    width: 100%;
+    max-width: none;
     display: flex;
     flex-direction: column;
     gap: 32px;
@@ -2000,7 +2002,7 @@
   }
   body .footer_container_top--box {
     width: 100%;
-    max-width: 335px;
+    max-width: none;
   }
   body .footer_container_line {
     margin-top: 32px;
