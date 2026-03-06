@@ -390,7 +390,8 @@
         .header_home_absolute {
             left: 20px;
             bottom: 20px;
-            max-width: 107px;
+            max-width: 120px;
+            gap: 12px;
 
             &--button svg {
                 width: 28px;
@@ -626,7 +627,7 @@
             font-weight: 600;
             font-size: 14px;
             color: #FFFFFF;
-            padding: 16px 18px;
+            padding: 17px 18px;
             border: none;
             cursor: pointer;
             position: absolute;

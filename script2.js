@@ -31,26 +31,92 @@
   myForm.addEventListener('submit', function (event) {
 
     event.preventDefault();
+
+    const form = this;
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    refs.modal2.classList.toggle("is-hidden");
+    document.body.classList.toggle("no-scroll");
+    console.log("sendReview")
+    openPopup2();
+    setTimeout(hidePopup2, 4000)
+    clearForm();
+
+
+    console.log('Form submission prevented. Handling with custom JavaScript.');
+
+  });
+
+
+  const myForm2 = document.getElementById('modal-form');
+
+  myForm2.addEventListener('submit', function (event) {
+
+    event.preventDefault();
+
+    const form = this;
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    refs.modal.classList.toggle("is-hidden");
+    document.body.classList.toggle("no-scroll");
+    console.log("sendModal")
+    openPopup();
+    setTimeout(hidePopup, 3000)
+    clearForm();
+
+
+    console.log('Form submission prevented. Handling with custom JavaScript.');
+
+  });
+
+  const myForm3 = document.getElementById('popup3-form');
+
+  myForm3.addEventListener('submit', function (event) {
+
+    event.preventDefault();
+
+    const form = this;
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+     refs.openPopup3.classList.add("hidden");
+    console.log("popup3IsClosing")
+    clearForm();
+    
+    toggleOverlay();
+
+
     console.log('Form submission prevented. Handling with custom JavaScript.');
 
   });
 
   refs.openModalBtn.addEventListener("click", toggleModal);
   refs.closeModalBtn.addEventListener("click", toggleModal);
-  refs.sendModalBtn.addEventListener("click", sendModal);
+  // refs.sendModalBtn.addEventListener("click", sendModal);
   refs.closePopup.addEventListener("click", hidePopup);
 
   refs.closePopup2.addEventListener("click", hidePopup2);
-  
+
 
 
   refs.openReviewBtn.addEventListener("click", toggleReview);
   refs.closeReviewBtn.addEventListener("click", toggleReview);
-  refs.sendReviewBtn.addEventListener("click", sendReview);
+  // refs.sendReviewBtn.addEventListener("click", sendReview);
 
-  refs.subscribeBtn.addEventListener("click", popup3open );
+  refs.subscribeBtn.addEventListener("click", popup3open);
   refs.closePopup3.addEventListener("click", popup3close);
-  refs.submitPopup3.addEventListener("click", popup3close);
+  // refs.submitPopup3.addEventListener("click", popup3close);
 
 
 
@@ -63,6 +129,8 @@
     refs.openPopup3.classList.add("hidden");
     console.log("popup3IsClosing")
     clearForm();
+    
+    toggleOverlay();
   }
 
   function toggleModal() {
@@ -106,7 +174,8 @@
 
   function openPopup() {
     refs.openPopup.classList.remove("hidden");
-    console.log("popupIsOpening")
+    console.log("popupIsOpening");
+    toggleOverlay();
   }
 
 
@@ -118,7 +187,8 @@
 
   function openPopup2() {
     refs.openPopup2.classList.remove("hidden");
-    console.log("popup2IsOpening")
+    console.log("popup2IsOpening");
+    toggleOverlay();
   }
 
   function isPopupVisible() {

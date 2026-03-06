@@ -80,7 +80,13 @@
                     display: flex;
                     gap: 18px;
 
-                    
+                    &--insta:hover path {
+                        stroke: #FD9222;
+                    }
+
+                    &--twitter:hover path {
+                        stroke: #FD9222;
+                    }
                 }
             }
         }
