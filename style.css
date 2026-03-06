@@ -2588,6 +2588,7 @@
 }
 .footer_container_top--box--socials--insta:hover path {
   stroke: #FD9222;
+  transition: 0.3s ease;
 }
 .footer_container_top--box--socials--twitter:hover path {
   stroke: #FD9222;

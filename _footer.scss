@@ -82,12 +82,14 @@
 
                     &--insta:hover path {
                         stroke: #FD9222;
+                        transition: 0.3s ease;
                     }
 
                     &--twitter:hover path {
                         stroke: #FD9222;
                     }
                 }
+
             }
         }
 
